@@ -1,0 +1,6 @@
+/*.main-wrap { position: relative; max-width:1860px; width:100%; min-width:1240px; margin:0 auto; padding:0 20px; background:url(../img/main-bg.jpg);  box-sizing:border-box;}
+.main-wrap > div { height: 400px; }*/
+.section { background-size: 100% 953px; }
+.box1 { background:url(../img/bg.png) no-repeat 100% center; background-size: 100% 953px;}
+.box2 { background:url(../img/intro2.png) no-repeat 100% center;background-size: 100% 953px;}
+.box3 { background:url(../img/main.png) no-repeat 100% center; background-size: 100% 953px;}

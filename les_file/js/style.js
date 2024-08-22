@@ -1,4 +1,21 @@
+/* Intro */
+setTimeout(function(){
+   $('.intro-txt-box').addClass('hide');
+ }, 3300);
+setTimeout(function(){
+   $('.intro-logo').addClass('show');
+ }, 4000);
+ setTimeout(function(){
+   $('.intro-wrap .box').addClass('on');
+ }, 4800);
+ setTimeout(function(){
+   $('.intro-wrap .view-btn').show();
+ }, 5500);
+
+
 $(document).ready(function(){
-   $('#header').load('./les_file/layout/header.html');
-   $('#footer').load('./les_file/layout/footer.html');
+   /* intro */ 
+   $(".intro-wrap").each(function(){
+      $(this).addClass('on');
+   });
 });
