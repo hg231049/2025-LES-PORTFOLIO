@@ -8,15 +8,13 @@
     <!--css-->
     <link rel="stylesheet" href="/dles/css/style.css">
     <link rel="stylesheet" href="/dles/css/motion.css">
-    <link rel="stylesheet" href="./dles/css/main.css">
 
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!--js-->
     <script src="/dles/js/style.js"></script>
-    <script src="./dles/js/main.js"></script>
-    
+
     <!--swiper-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -25,8 +23,20 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body >
-  <header id="header"></header>
-  <div id="main"></div>
-  <footer id="footer"></footer>
+  <header id="header">
+    <script>
+      $('#header').load('/dles/layout/header.html');
+    </script>
+  </header>
+  <div id="main">
+    <script>
+      $('#main').load('/main.html');
+    </script>
+  </div>
+  <footer id="footer">
+    <script>
+       $('#footer').load('/dles/layout/footer.html');
+    </script>
+  </footer>
 </body>
 </html>
