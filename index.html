@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--css-->
-    <link rel="stylesheet" href="./dles/css/style.css">
-    <link rel="stylesheet" href="./dles/css/motion.css">
+    <link rel="stylesheet" href="/dles/css/style.css">
+    <link rel="stylesheet" href="/dles/css/motion.css">
 
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!--js-->
     <script src="/dles/js/jquery.js"></script>
     <script src="/dles/js/style.js"></script>
-    
-
     
     <!-- fullpage -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.26/fullpage.css" integrity="sha512-CWyM/Ni2h1mWRsWWmOswyfpQFadUhIaq89gkx6pfykOtbEhMvXutCrvbNR7fWQAh4QNss2pVndPw6InDfKhdXw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -35,9 +34,16 @@
 
 <body >
   
-  <header id="header"></header>
+  <header id="header">
+
+  </header>
   <div id="main"></div>
   <footer id="footer"></footer>
 
+  <script>
+    $('#header').load('/dles/layout/header.html');
+   $('#main').load('/main.html');
+   $('#footer').load('/dles/layout/footer.html');
+  </script>
 </body>
 </html>
