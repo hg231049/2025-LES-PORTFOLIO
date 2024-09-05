@@ -17,6 +17,9 @@ $(document).ready(function(){
    $(".intro-wrap").each(function(){
       $(this).addClass('on');
    });
-
+   
+   $('#header').load('/dles/layout/header.html');
+   $('#main').load('/main.html');
+   $('#footer').load('/dles/layout/footer.html');
    
 });
