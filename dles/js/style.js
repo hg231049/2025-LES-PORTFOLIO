@@ -17,8 +17,8 @@ $(document).ready(function(){
    $(".intro-wrap").each(function(){
       $(this).addClass('on');
    });
-   
-   $('#header').load('./les_file/layout/header.html');
+
+   $('#header').load('./dles/layout/header.html');
    $('#main').load('/main.html');
-   $('#footer').load('./les_file/layout/footer.html');
+   $('#footer').load('./dles/layout/footer.html');
 });

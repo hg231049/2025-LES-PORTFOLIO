@@ -41,10 +41,10 @@ function showDiv(){
 /* about 이미지 미우스오버 */  
 var about = document.getElementById('about');
 function mouseover (){
-	about.setAttribute("src","./les_file/img/about-image-on.png");
+	about.setAttribute("src","./dles/img/about-image-on.png");
 }
 function mouseleave (){
-	about.setAttribute("src","./les_file/img/about-image.png");
+	about.setAttribute("src","./dles/img/about-image.png");
 }        
 
 $(document).ready(function(){
