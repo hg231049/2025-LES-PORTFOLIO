@@ -44,9 +44,7 @@ $(document).ready(function(){
    });
    
    /* 파일 불러오기 */ 
-   $('#header').load('./les_file/layout/header.html');
-   $('#main').load('./main.html');
-   $('#footer').load('./les_file/layout/footer.html');
+   $
 
     /* 상단 고정 */
 	$(window).scroll(showHeader);
