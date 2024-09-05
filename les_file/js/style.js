@@ -43,13 +43,8 @@ $(document).ready(function(){
       $(this).addClass('on');
    });
    
-   /* 파일 불러오기 */ 
-   $
-
     /* 상단 고정 */
 	$(window).scroll(showHeader);
 	showHeader();
-   
-   
    
 });
