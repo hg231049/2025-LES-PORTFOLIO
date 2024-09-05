@@ -23,20 +23,20 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body >
-  <header id="header">
-    <script>
+  <header id="header"></header>
+  <div id="main"></div>
+  <footer id="footer"></footer>
+  <script>
+    $(document).ready(function(){
+
       $('#header').load('/dles/layout/header.html');
-    </script>
-  </header>
-  <div id="main">
-    <script>
-      $('#main').load('/main.html');
-    </script>
-  </div>
-  <footer id="footer">
-    <script>
-       $('#footer').load('/dles/layout/footer.html');
-    </script>
-  </footer>
+    $('#main').load('/main.html');
+    $('#footer').load('/dles/layout/footer.html');
+   
+  
+   
+});
+   
+  </script>
 </body>
 </html>
