@@ -49,16 +49,6 @@ function mouseleave (){
 
 $(document).ready(function(){
 	
-
-	/* 상단 카테고리 */
-	$('#header .gnb > li').each(function(){
-		$(this).mouseenter(function(){
-		$(this).addClass('on');
-		}).mouseleave(function(){
-		$(this).removeClass('on');
-		});
-	});
-
    /* 메인 슬라이드 배너 */
 	$(".main-visual").css('opacity','1');
 	

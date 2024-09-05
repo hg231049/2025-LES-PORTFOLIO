@@ -74,7 +74,7 @@ header
 #header .gnb > li > a { color:var(--sub-color); font-size:22px; } 
 #header .gnb > li.red { margin-right:0; padding:11px 26px 12px; border-radius:50px; background:var(--main-color); }
 #header .gnb > li.on > a { color:var(--main-color); transition:0.2s ease-in-out; } 
-#header .gnb > li.on::after { content:""; position:absolute; top:-15px; left:50%; width:10px; height:13px; border-radius:100%; background:url("./les_file/img/cate-on.png") no-repeat; transform:translateX(-50%); }
+#header .gnb > li.on::after { content:""; position:absolute; top:-15px; left:50%; width:10px; height:13px; border-radius:100%; background:url("../img/cate-on.png") no-repeat; transform:translateX(-50%); }
 #header .gnb > li.red.on { background:var(--sub-color); } 
 #header .gnb > li.red.on a { color:var(--main-color); } 
 #header .gnb > li.red.on::after { display:none; }
