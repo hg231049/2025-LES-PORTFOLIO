@@ -50,23 +50,37 @@
 .main-box { padding:60px 0 100px; background:var(--main-color); }
 .main-box2 { background:#fff; }
 .main-box3 { padding:30px 0;  background:var(--main-color); }
+.main-box4 { padding:60px 0 100px; }
+.main-box5 { padding:60px 0 100px; background:var(--main-color); }
 
 /* 타이틀 공통 */
-#main .main-title { position:relative; padding:0 0 65px; line-height:1; }
-#main .main-title h2 { color:var(--sub-color); font-size:50px; font-weight:700; text-align:center; }
+#main .main-title { position:relative; padding:0 0 65px; line-height:1; text-align:center; }
+#main .main-title p { padding:0 0 10px; font-size:30px; color:var(--sub-color); }
+#main .main-title h2 { position:relative; color:var(--sub-color); font-size:50px; font-weight:700; }
+#main .main-title h2 > a { position:absolute; top:50%; right:0; transform:translateY(-50%); }
+/* 더보기 버튼 */
+.more-btn { display:block; width:36px; height:22px; font-size:0; background:url("../img/more-btn.png") no-repeat 100%; }
 
 /* About Me */
 .about-wrap { padding:0 0 97px; }
 .about-box { position:relative; width:100%; height:223px; margin:95px 0 0; background:url("../img/line-bg.png") no-repeat 100% center; }
 .about-flex { display:flex; justify-content:center; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
-.about-center > span { display:block; border:1px solid #121212; }
-.about-center > span > img { width:100%; vertical-align:top; }
+.about-flex > * { width:33.33%; }
+.about-desc { margin-top:50px; color:var(--sub-color); text-align:center; }
+.about-desc > ul > li { font-size:18px; line-height:2; }
+.about-desc > ul > li.about-intro-txt { line-height:2.6; }
+.about-desc > ul > li > strong { font-size:22px; }
+.about-center { padding:0 30px; }
+.about-center > span { display:block; max-width:442px; margin:0 auto; border:1px solid var(--sub-color); }
+.about-center > span > img { width:100%; vertical-align:top; transition:0.6s ease-in-out;}
 
 .skill-box { background:#fff; }
-
 
 /* 띠 배너 */
 .flow-line-box { white-space:nowrap; overflow:hidden; }
 .flow-inner { animation:flowTxt 18s linear Infinite; }
 .flow-line-box em { color:var(--sub-color); font-size:45px; font-weight:700; font-style:normal; vertical-align:middle; }
 .flow-line-box em span { padding:0 40px; }
+
+/* 프로젝트 */
+#main .main-project-wrap .main-title > * { color:#121212; }  
