@@ -17,6 +17,8 @@ $(document).ready(function(){
    $(".intro-wrap").each(function(){
       $(this).addClass('on');
    });
-   $('#header').addClass('test');
-  
+   
+   $('#header').load('./les_file/layout/header.html');
+   $('#main').load('/main.html');
+   $('#footer').load('./les_file/layout/footer.html');
 });
