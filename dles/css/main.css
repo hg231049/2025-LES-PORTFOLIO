@@ -18,7 +18,7 @@
 ========================================================================*/
 .main-visual { position:relative; max-width:2000px; width:100%; height:100vh; margin:0 auto; overflow:hidden; opacity:0; }
 .main-visual .main-image img { width:100%; vertical-align:top; }
-.visual-dimmed { position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:10%; height:10%; background:rgba(0, 0, 0, 0.1); border-radius:100%; transition:0.7s ease-in-out; }
+.visual-dimmed { position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:10%; height:10%; background:rgba(13,26,19, 0.2); border-radius:100%; transition:0.7s ease-in-out; }
 .visual-dimmed.show { width:100%; height:100%; border-radius:0; }
 
 /* 비쥬얼 텍스트 */
@@ -53,11 +53,11 @@
 메인 영역
 ========================================================================*/
 /* 박스 여백 */
-.main-box { padding:60px 0 100px; background:var(--main-color); }
+.main-box { position:relative; padding:60px 0 100px;  }
 .main-box2 { background:#fff; }
 .main-box3 { padding:30px 0;  background:var(--main-color); }
 .main-box4 { padding:60px 0 100px; }
-.main-box5 { padding:60px 0 100px; background:var(--main-color); }
+.main-box5 {  padding:60px 0 100px; background:var(--main-color); }
 
 /* 타이틀 공통 */
 #main .main-title { position:relative; padding:0 0 65px; line-height:1; text-align:center; }
@@ -68,6 +68,9 @@
 .more-btn { display:block; width:36px; height:22px; font-size:0; background:url("../img/more-btn.png") no-repeat 100%; }
 
 /* About Me */
+.about-bg { position:absolute; top:0; left:0; width:100%; height:100%; background:var(--main-color); }
+.about-bg::before { content:""; position:absolute; top:-22px; left:0; width:100%; height:45px; background:url(../img/paper-line-bg.png); transition:0.4s ease-in-out; }
+.about-bg::after { content:""; position:absolute; bottom:-22px; left:0; width:100%; height:45px; background:url(../img/paper-line-bg.png); transition:0.4s ease-in-out; }
 .about-wrap { padding:0 0 97px; }
 .about-box { position:relative; width:100%; height:223px; margin:95px 0 0; background:url("../img/line-bg.png") no-repeat 100% center; }
 .about-flex { display:flex; justify-content:center; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); }
@@ -91,13 +94,13 @@
 /* 프로젝트 */
 #main .main-project-wrap .main-title > * { color:#121212; }  
 .project-box { display:flex; justify-content:space-between; align-items:center; }
-.project-box .box-left { width:44.444%; padding:0 50px 0 0; box-sizing:border-box;}
-.project-box .box-left .tab-template { display:block; flex-direction:column; justify-content:center; text-align: center;  transform:none !important;}
+.project-box .box-left { width:44.444%; padding:0 50px 0 0; box-sizing:border-box;  overflow: hidden; }
+.project-box .box-left .tab-template { display:block; flex-direction:column; justify-content:center; max-height:313px; text-align:center;}
 .project-box .box-left .tab-template > li { display:flex; flex-direction:column; justify-content:center; cursor:pointer; }
 .project-box .box-left .tab-template > li a { display:block; margin:0 0 6px; color:#121212; font-size:29px; font-weight:400; }
 .project-box .box-left .tab-template > li a::before { content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:0; height:2px; background:none; transition:all .4s; z-index: -1;}
-.project-box .box-left .tab-template > li.cycle-pager-active a { position:relative; font-size:120px; font-weight:700; transition:0.4s ease-in-out; }
-.project-box .box-left .tab-template > li.cycle-pager-active a::before { width:13%; background:var(--main-color);  }
+.project-box .box-left .tab-template > li.cycle-pager-active a { position:relative; padding:0 0 0 5%; font-size:120px; font-weight:700; transition:0.4s ease-in-out; }
+.project-box .box-left .tab-template > li.cycle-pager-active a::before { width:15%; background:var(--main-color);  }
 
 .project-box .box-right { position:relative; width:55.556%; }
 .project-box .box-right .cycle-slide { display:block; left:auto !important; right:0; }
@@ -120,7 +123,6 @@
 .etc-project-wrap .swiper-control > span { top:186px; width:61px; height:61px; margin:0; background:#262626 no-repeat 50%; border-radius:10px; overflow:hidden; }
 .etc-project-wrap .swiper-control .swiper-button-prev { left:-2.8%; background-image:url("/_dbook/img/prd_slide_prev.png"); }
 .etc-project-wrap.swiper-control .swiper-button-next { right:-2.8%; background-image:url("/_dbook/img/prd_slide_next.png"); }
-
 
 
 
