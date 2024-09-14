@@ -15,8 +15,8 @@ motion
 	100% { opacity:1; transform:translateX(0) } 
 }
 
-@keyframes TransY { 
-	0% { opacity:0; transform:translateY(60px) } 
+@keyframes TransYT { 
+	0% { opacity:0; transform:translateY(-60px) } 
 	100% { opacity:1; transform:translateY(0) } 
 }
 @keyframes TransYS { 
@@ -78,7 +78,7 @@ motion
 .motion ._transLP { animation:TransLP 1s forwards; }
 .motion ._transLSP { animation:TransLSP 1s forwards; }
 
-.motion ._transY { animation:TransY 1s forwards; }
+.motion ._transYT { animation:TransYT 1s forwards; }
 .motion ._transYS { animation:TransYS 1s forwards; }
 .motion ._transXL { opacity:0; animation:TransXL 1s forwards; }
 .motion ._transXLS { opacity:0; animation:TransXLS 1s forwards; }

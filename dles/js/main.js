@@ -22,6 +22,9 @@ function animateM($item){
 	if (scrollTop > $item.offset().top) {
 		$item.addClass("motion");
 	} 
+	else {
+		$item.removeClass("motion");
+	   }
 }
 function showDiv(){
 	var mainDivEl = $(".main-wrap > div");
@@ -39,42 +42,49 @@ function mouseleave (){
 	about.setAttribute("src","./dles/img/about-image.png");
 }        
 
+//pie-chart
+$(function(){
+    
 
-	/* etc */
-	let prdSwiper;
-	function initSwiper(bool, between, view) {
-		if (typeof(prdSwiper) == 'object') prdSwiper.destroy();
-		
-		return prdSwiper = new Swiper('.etc-box .swiper-container', {
-			spaceBetween: between,		
-			slidesPerView: view,
-			loop: bool,
-			centeredSlides: bool,					
-			grabCursor: true,
-			scrollbar: {
-				el: '.etc-box .swiper-scrollbar',
-				hide: false,
-				draggable: true,
-			},
-			navigation: {	
-				nextEl: '.etc-box .swiper-button-next',
-				prevEl: '.etc-box .swiper-button-prev',
-			},
-		});
-	}
-	function mainSizeListener() {
-		setTimeout(function(){
+  })
+
+/* etc */
+let prdSwiper;
+function initSwiper(bool, between, view) {
+	if (typeof(prdSwiper) == 'object') prdSwiper.destroy();
 	
-		var prdSlideH = $('.etc-project-wrap').height();
-			document.documentElement.style.setProperty('--etc-project-height', prdSlideH + 'px');
-		}, 1000);
-	
-		if ( $(window).outerWidth() <= 768) {
-			initSwiper(false, 10, 2.3);
-		} else {
-			initSwiper(true, 0, 'auto');
-		}
+	return prdSwiper = new Swiper('.etc-box .swiper-container', {
+		spaceBetween: between,		
+		slidesPerView: view,
+		loop: bool,
+		centeredSlides: bool,					
+		grabCursor: true,
+		scrollbar: {
+			el: '.etc-box .swiper-scrollbar',
+			hide: false,
+			draggable: true,
+		},
+		navigation: {	
+			nextEl: '.etc-box .swiper-button-next',
+			prevEl: '.etc-box .swiper-button-prev',
+		},
+	});
+}
+
+function mainSizeListener() {
+	setTimeout(function(){
+
+	var prdSlideH = $('.etc-project-wrap').height();
+		document.documentElement.style.setProperty('--etc-project-height', prdSlideH + 'px');
+	}, 1000);
+
+	if ( $(window).outerWidth() <= 768) {
+		initSwiper(false, 10, 2.3);
+	} else {
+		initSwiper(true, 0, 'auto');
 	}
+}
+
 $(window).resize(function(){
 	mainSizeListener();
 });
@@ -93,8 +103,32 @@ $(document).ready(function(){
         }
     });
 
+	$('.skill-box .skill').each(function() {
+		skillOption = {
+			animate:{
+				duration: 3000, // 애니메이션 시간
+				enabled: true
+			},
+			barColor:'#b53720',  // 바 색상
+			scaleColor: false,
+			lineWidth: 8,  // 선두께
+			lineCap:'round',  //  선끝 모양
+			size: 90  // 크기
+		};
+		$('.skill1').easyPieChart(skillOption); 
+		$('.skill2').easyPieChart(skillOption); 
+		$('.skill3').easyPieChart(skillOption);  
+	});
 
-
+	$('.project-box').each(function() {
+		$(this).children('.bn').each(function() {
+			$(this).addClass('_transXR');
+			$(this).addClass('ani10');
+		});
+		$(this).children('.project-desc-box').each(function() {
+			$(this).addClass('_transXL');
+			$(this).addClass('ani10');
+		});
+	});
 });
-
 
