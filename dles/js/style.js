@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     /* html 파일 로드 */  
     $('#header').load('./dles/layout/header.html');
-    $('#contents > #main').load('./dles/pages/main.html');
+    $('#contents').load('./dles/pages/main.html');
     $('#footer').load('./dles/layout/footer.html');
    
   

@@ -31,14 +31,17 @@ table .pc-view { display:revert; }
 
 	/* pc & mo 보기 설정 */
 	.mo-view { display:block; }
-	.mo-view.display-flex { display:flex; }
-	.mo-view.display-inline { display:inline-block; }
-	.pc-view,
-	.pc-view.display-flex,
-	.pc-view.display-inline,
-	table .pc-view { display:none; }
+	.pc-view { display:none; }
 
-	
+
+	/*=======================================
+	인트로 - 768px
+	========================================*/
+	.intro-txt { width:75%; margin:0 auto; }
+	.intro-wrap.on .intro-txt-box > * { position:static; }
+	.intro-logo { width:100%; }
+	.intro-wrap .view-btn > a { display:block; width:80%; }
+
 	/*=======================================
 	Layout - 768px
 	========================================*/
@@ -50,12 +53,13 @@ table .pc-view { display:revert; }
 	/*=======================================
 	상단 영역 - 768px
 	========================================*/
-	#header .header-top { display:block; position:relative; }
-	#header .header-inner { padding:0 15px; }
+	#header.fixed::before { height:60px; }
+	#header .header-top { display:block; left:50%; right:auto; transform:translateX(-50%); } 
+	#header .header-inner { padding:0 20px; }
 
-	.header-left .logo { width:88px; margin:18px auto; }
-	#header h1.top-logo a { font-size:0; }
-	#header h1.top-logo img { width:100%; }
+	.header-left .logo { width:88px; }
+	.header-left .logo > a { margin:15px 0; font-size:0; }
+	.header-left .logo > a img { width:100%; }
 	
 	#header .header-right { display:none;  }
 	#header .top-account > ul.column1 { display:none; }
@@ -133,17 +137,3 @@ table .pc-view { display:revert; }
     
 }
 
-@media all and (max-width:640px) {
-	.mo640 { display:none; }
-
-	/*=======================================
-	하단 영역 - 640px
-	========================================*/
-
-
-}
-@media all and (max-width:320px) {
-
-
-
-}
