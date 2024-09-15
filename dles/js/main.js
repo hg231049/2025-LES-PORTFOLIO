@@ -72,7 +72,7 @@ function mainSizeListener() {
 		document.documentElement.style.setProperty('--etc-project-height', prdSlideH + 'px');
 	}, 1000);
 
-	if ( $(window).outerWidth() <= 768) {
+	if ( $(window).outerWidth() <= 1024) {
 		initSwiper(true, 10, 1.3);
 	} else {
 		initSwiper(true, 0, 'auto');
