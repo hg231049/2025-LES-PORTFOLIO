@@ -28,23 +28,23 @@
 .main-visual > a > div.main-visual-title ul> .mainTit {  text-align:center; }
 .main-visual > a > div.main-visual-title ul> .mainTit > img { width:100%; }
 .main-visual > a > div.main-visual-title ul > .sub-tit { display:flex; align-items:center; justify-content:space-between; position:relative; color:var(--sub-color); font-size:50px;  }
+.main-visual > a > div.main-visual-title ul > .sub-tit > p { text-wrap:nowrap; }
 .main-visual > a > div.main-visual-title ul > .main-txt1 { margin-bottom:60px; text-align:left; letter-spacing:-2.5px; }
 .main-visual > a > div.main-visual-title ul > .main-txt3 { margin-top:60px; text-align:right; letter-spacing:-0.5px; }
 
-.main-visual .main-visual-title .visual-txt-motion::before { content:""; position:absolute; top:50%; left:150px; transform:translateY(-50%); width:0; height:1px; background:var(--sub-color); transition:0.4s ease-in-out; }
-.main-visual .main-visual-title .visual-txt-ani2::before { right:355px; left:auto; transform:translateY(-50%); width:0; height:1px; background:var(--sub-color); transition:0.4s ease-in-out; }
+.main-visual .main-visual-title .visual-txt-ani { width:0; height:1px; margin:0 5.256%; background:var(--sub-color);  transition:0.4s ease-in-out; }
+.main-visual .main-visual-title .visual-txt-ani.active { width:100%; }
 
 /* 텍스트 모션 */
 .main-visual > a > div.main-visual-title ul > * { opacity:0; backface-visibility:hidden; animation:FadeIn 1s ease-in-out both;  }
 .main-visual > a > div.main-visual-title ul > .main-txt1 { animation-delay:0.8s; }
 .main-visual > a > div.main-visual-title ul > .main-txt2 { animation-delay:1.25s; }
-.main-visual > a >  div.main-visual-title ul > .main-txt3 { animation-delay:1.75s; }
+.main-visual > a > div.main-visual-title ul > .main-txt3 { animation-delay:1.75s; }
 
 .main-visual .main-visual-title .visual-txt-motion > img { opacity:0; transition:0.4s ease-in-out; }
 .main-visual .main-visual-title .visual-txt-motion > img.rotate { opacity:1; animation:Rotate 1.8s ease-in-out infinite;  }
-.main-visual .main-visual-title .visual-txt-ani2 { text-align:left; }
-.main-visual .main-visual-title .visual-txt-ani1.active::before { width:calc(100% - 221px); }
-.main-visual .main-visual-title .visual-txt-ani2.active::before { width:calc(100% - 435px); }
+
+
 
 /* 스크롤 다운 */
 .main-visual .scroll-down { position:absolute; bottom:-100px; left:50%; transform:translateX(-50%); transition:1s ease-in-out; }
@@ -179,14 +179,18 @@
 }
 
 @media all and (max-width:1400px) { 
+    .main-visual > a > div.main-visual-title ul > .sub-tit { font-size:35px; }
+
     /* 타이틀 공통 */
     #main .main-title h2,
-    #main .about-wrap .main-title h2 { position:static; margin:0 auto; }
+    #main .about-wrap .main-title h2 { position:static; }
+    #main .main-title > * { margin:0 auto; }
     #main .main-project-wrap .main-title { flex-direction:column-reverse; align-items:center; }
     #main .etc-project-wrap  .main-title { display:block; }
     #main .main-title > p { margin:40px auto 0;}
 
     /* about */
+    #main .about-wrap .main-title h2 { margin: 0; }
     .about-flex { display:block; }
     .about-flex > * { width:100%; }
     .about-center { margin:65px 0 20px; }
@@ -204,7 +208,7 @@
      
 
 @media all and (max-width:1024px) { 
-
+    .main-visual > a > div.main-visual-title ul > .sub-tit { font-size:25px;}
 
      /* 메인 프로젝트 */
      .main-project-wrap .project-wrap-bottom { padding-top:50px; }
@@ -220,16 +224,14 @@
 
     /* 메인 비쥬얼 */
     .main-visual { height:100%; }
-    .main-visual > a > div.main-visual-title ul { top: calc(50% - 60px); }
-    .main-visual > a > div.main-visual-title ul > .sub-tit { font-size:25px;}
+    .main-visual > a > div.main-visual-title ul { top:calc(50% - 60px); width:60%; }
+    .main-visual > a > div.main-visual-title ul > .sub-tit { font-size:19px;}
     .main-visual > a > div.main-visual-title ul > .main-txt1 { margin-bottom:30px; }
     .main-visual > a > div.main-visual-title ul > .main-txt3 { margin-top:30px; }
 
-    .main-visual .main-visual-title .visual-txt-motion > img.rotate { width:50%; }
-    .main-visual .main-visual-title .visual-txt-motion::before { left:50%; transform:translate(-50%,-50%); }
-    .main-visual .main-visual-title .visual-txt-ani2::before { right:auto; left:22%; transform:translate(-50%,-50%); }
-    .main-visual .main-visual-title .visual-txt-ani1.active::before { width:52%; } 
-    .main-visual .main-visual-title .visual-txt-ani2.active::before { width:15%; }
+    .main-visual .main-visual-title .visual-txt-motion > img.rotate { width:100%; }
+
+
     .main-visual .scroll-down > span { width:70%; }
 
     /* 타이틀 공통 */
@@ -241,6 +243,12 @@
     .btn-box { padding:30px 0 0; }
     .btn-box > * { width:105px; height:35px; margin:0 10px; }
     .btn-box > li > a { font-size:15px; }
+
+    /* box 간격 */
+    .main-box { padding:65px 0 75px; }
+    .main-box2 { padding:65px 0 0; }
+    .main-box3 { padding:100px 0 65px; }
+    .main-box4 { padding:20px 0; }
 
     /* about */
     #main .about-wrap .main-title p { margin:40px 0 0;  }
@@ -258,7 +266,7 @@
     .introduce-txt > .sub-introduce::after { display:none; }
 
     /* line 배너 */
-    .main-box4 { padding:20px 0; }
+    
     .flow-inner { animation:flowTxt 8s linear Infinite; }
     .flow-line-box em { font-size:30px; }
     .flow-line-box em span img { width:6%; vertical-align:top; }
@@ -267,6 +275,7 @@
     .project-tab { padding:0; }
     .project-tab > ul { flex-wrap:wrap; }
     .project-tab > ul > li { width:33.33%; margin:10px 0; font-size:18px; text-align:center; }
+    .project-tab > ul > li:nth-child(n+4) { width:auto; }
     .project-tab > ul > li.cycle-pager-active::after { top:-5px; height:2px; }
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:60px; }
     .project-wrap-bottom .project-box .project-desc-box p { font-size:15px; }
@@ -290,4 +299,10 @@
     .etc-project-wrap .swiper-scrollbar-drag { background:#121212; border-radius:0; }
     /* 좌우 버튼 */
     .etc-project-wrap .swiper-control { display:none; }
+}
+
+@media all and (max-width:400px) {
+    /* 메인 프로젝트 */
+    .project-tab > ul > li { font-size:16px; }
+    .project-wrap-bottom .project-box .project-desc-box h3 { font-size:40px; }
 }

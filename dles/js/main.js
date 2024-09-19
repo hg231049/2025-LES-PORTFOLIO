@@ -4,7 +4,7 @@ setTimeout(function(){
 	$('.visual-dimmed').addClass('show');
   }, 100);
 setTimeout(function(){
-	$('.main-visual .main-visual-title .visual-txt-motion').addClass('active');
+	$('.main-visual .main-visual-title .visual-txt-ani').addClass('active');
   }, 2800);
   setTimeout(function(){
 	$('.main-visual .main-visual-title .visual-txt-motion > img').addClass('rotate');
