@@ -45,8 +45,10 @@ table .pc-view { display:revert; }
 	상단 영역 - 768px
 	========================================*/
 	#header.fixed::before { height:60px; }
-	#header .header-top { display:block; left:20px; right:20px; width:calc(100% - 40px); } 
+	#header .header-top { display:block; top:0; left:20px; right:20px; width:calc(100% - 40px); } 
 	#header .header-wrap::before { height:110px; border-bottom-left-radius:50px; border-bottom-right-radius:50px; background:var(--sub-color); box-shadow:1px 1px 5px rgba(0, 0, 0, 0.1); }
+	#header.fixed:not(.change) .header-wrap::before { top:-200px; }
+	#header.change .header-wrap::before { top:0; }
 	#header .header-inner { padding:0 20px; }
 	#header.change .header-top { top:0; }
 	.header-left,
