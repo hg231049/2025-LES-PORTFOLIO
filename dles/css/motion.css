@@ -20,43 +20,28 @@ motion
 	0% { opacity:0; transform:translateX(60px) } 
 	100% { opacity:1; transform:translateX(0) } 
 }
-@keyframes TransXLS { 
-	0% { opacity:0; transform:translateX(40px) } 
-	100% { opacity:1; transform:translateX(0) } 
-}
+
 @keyframes TransXR { 
 	0% { opacity:0; transform:translateX(-60px) } 
 	100% { opacity:1; transform:translateX(0) } 
 }
-@keyframes TransXRS { 
-	0% { opacity:0; transform:translateX(-40px) } 
-	100% { opacity:1; transform:translateX(0) } 
-}
+
 @keyframes FadeIn { 
 	from{ opacity:0 } 
 	to{ opacity:1 } 
 }
-@keyframes FadeOut { 
-	from{ opacity:1 } 
-	to{ opacity:0 } 
-}
+
 @keyframes Rotate { 
 	0% { transform:rotate(0) } 
 	100% { transform:rotate(360deg) } 
 }
-@keyframes vibration {
-	0% { transform: rotate(0deg); } 
-	1.5% { transform: rotate(3deg); } 
-	3% { transform: rotate(-3deg); } 
-	4.5% { transform: rotate(3deg); } 
-	6% { transform: rotate(-3deg); } 
-	7.5% { transform: rotate(0deg); } 
-}
+
 @keyframes scrollDown { 
 	0% { bottom:30px; } 
 	40% { bottom:60px; } 
 	100% { bottom:30px; } 
 }
+
 @keyframes flowTxt {
     0% {
       transform:translateX(0);
@@ -65,18 +50,13 @@ motion
         transform:translateX(-50%);
     }
   }
+
 [class*="_trans"],
 .fadeIn { opacity:0; }
-
-.motion ._transLP { animation:TransLP 1s forwards; }
-.motion ._transLSP { animation:TransLSP 1s forwards; }
-
 .motion ._transYT { animation:TransYT 1s forwards; }
 .motion ._transYS { animation:TransYS 1s forwards; }
 .motion ._transXL { opacity:0; animation:TransXL 1s forwards; }
-.motion ._transXLS { opacity:0; animation:TransXLS 1s forwards; }
 .motion ._transXR { opacity:0; animation:TransXR 1s forwards; }
-.motion ._transXRS { opacity:0; animation:TransXRS 1s forwards; }
 .motion .fadeIn { animation:FadeIn 1s forwards; }
 
 .motion .ani2 { animation-delay:.2s; }
