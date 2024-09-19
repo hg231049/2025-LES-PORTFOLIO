@@ -2,18 +2,6 @@
 motion
 ========================================================================*/
 @charset "utf-8";
-@-webkit-keyframes TransY { 
-	0% { opacity:0; transform:translateY(60px)} 
-	100% {opacity:1; transform:translateY(0)}
-}
-@keyframes TransLP { 
-	0% { opacity:0; transform:translateX(60%) } 
-	100% { opacity:1; transform:translateX(0) } 
-}
-@keyframes TransLSP { 
-	0% { opacity:0; transform:translateX(20%) } 
-	100% { opacity:1; transform:translateX(0) } 
-}
 
 @keyframes TransYT { 
 	0% { opacity:0; transform:translateY(-60px) } 
@@ -22,6 +10,11 @@ motion
 @keyframes TransYS { 
 	0% { opacity:0; transform:translateY(40px) } 
 	100% { opacity:1; transform:translateY(0) } 
+}
+@keyframes TransYSM { 
+	0% { transform:translateY(0) } 
+	50% { transform:translateY(-400px) } 
+	100% { transform:translateY(0) } 
 }
 @keyframes TransXL { 
 	0% { opacity:0; transform:translateX(60px) } 
