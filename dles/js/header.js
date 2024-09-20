@@ -1,13 +1,17 @@
  
   var beforePosition = document.documentElement.scrollTop;
-
+  
   /* 상단 고정 */
   function showHeader() {
      var headH = $("#header").height();
      if ($(window).scrollTop() > headH) {
         $("#header").addClass("fixed");
+        $('#header').removeClass('on');
      } else {
         $("#header").removeClass("fixed");
+        setTimeout(function(){
+          $('#header').addClass('on');
+          }, 3600);
      }
   };
   
@@ -16,6 +20,7 @@
       if (afterPosition > 50) {
         if(beforePosition < afterPosition ){
           $("#header").addClass("change");
+
         } else {
          $("#header").removeClass("change");
         }

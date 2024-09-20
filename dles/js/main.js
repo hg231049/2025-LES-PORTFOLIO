@@ -9,9 +9,7 @@ setTimeout(function(){
   setTimeout(function(){
 	$('.main-visual .main-visual-title .visual-txt-motion > img').addClass('rotate');
   }, 3200);
-  setTimeout(function(){
-	$('#header').addClass('on');
-  }, 3600);
+  
   setTimeout(function(){
 	$('.main-visual .scroll-down').addClass('on');
   }, 4400);

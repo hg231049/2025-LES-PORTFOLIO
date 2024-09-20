@@ -10,8 +10,7 @@
 #main { box-sizing:border-box; overflow:hidden; background:var(--sub-color); }
 .main-wrap { padding:0; box-sizing:border-box; }
 
-#header { top:-106px; transition:1s ease-in-out; }
-#header.on { top:0; opacity:1; }
+
 
 .main-inner { position:relative; max-width:1840px; width:100%; margin:0 auto; padding:0 20px; box-sizing:border-box;}
 
@@ -295,6 +294,8 @@
     .etc-project-wrap .etc-box .prdList > li .prd-item { width:100%; margin:0; padding:0; }
     .etc-project-wrap .etc-box .prdList > li .prd-item > a { width:100%; }
     .etc-project-wrap .etc-box .prdList > li .prd-item .thumbnail { width:100%; height:auto; }
+    .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb,
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { max-height:300px; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:auto; opacity:1; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .thumbnail { width:100%; height:auto; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .description { width:100%; }
