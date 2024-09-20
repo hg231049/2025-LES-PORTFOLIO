@@ -51,6 +51,7 @@ function initSwiper(bool, between, view) {
 		loop: bool,
 		centeredSlides: bool,					
 		grabCursor: true,
+		autoHeight : true,
 		scrollbar: {
 			el: '.etc-box .swiper-scrollbar',
 			hide: false,
