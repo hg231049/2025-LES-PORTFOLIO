@@ -34,7 +34,7 @@ function showDiv(){
 }
 
 /* about 배너 */  
-var about = document.getElementById('about');
+var about = document.getElementById('aboutThumb');
 function mouseover (){
 	about.setAttribute("src","./dles/img/about-image-on.png");
 }
@@ -130,7 +130,6 @@ $(document).ready(function(){
 	/*main-prd3 동영상 열기1 */
 	$(".etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail").each(function(){
 		var thumbSrc = $(this).children('.thumb-detail').find("img");
-		console.log(thumbSrc);
 		$(this).click(function(e) {
 			$('.dimmed, .thumb-wrap').show();
 			$('body').css("overflow","hidden");
