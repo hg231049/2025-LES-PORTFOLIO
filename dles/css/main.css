@@ -305,7 +305,7 @@
     .etc-project-wrap .etc-box .prdList > li .prd-item > a { width:100%; }
     .etc-project-wrap .etc-box .prdList > li .prd-item .thumbnail { width:100%; height:auto; }
     .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb,
-    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { max-height:300px; }
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { height:300px; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:auto; opacity:1; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .thumbnail { width:100%; height:auto; }
     .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .description { width:100%; }
