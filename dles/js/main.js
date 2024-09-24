@@ -130,14 +130,15 @@ $(document).ready(function(){
 	$(".etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail").each(function(){
 		var thumbSrc = $(this).children('.thumb-detail').find("img");
 		$(this).click(function(e) {
-			$('.dimmed, .thumb-wrap').show();
+			$('.dimmed, .thumb-wrap, .thumb-wrap .close-btn').show();
 			$('body').css("overflow","hidden");
-			$('.thumb-wrap').html(thumbSrc);
+			$('.thumb-wrap .thumb-detail').html(thumbSrc);
 		});
-		$('.dimmed').click(function(e) {
+		$('.dimmed, .thumb-wrap .close-btn').click(function(e) {
 			e.preventDefault();
-			$('.thumb-wrap').html('').hide();
-			$(this).hide();
+			$('.thumb-wrap .thumb-detail').html('');
+			$('.thumb-wrap').hide();
+			$('.dimmed, .thumb-wrap .close-btn').hide();
 			$('body').css("overflow","");
 		});
 	});

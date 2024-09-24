@@ -25,6 +25,14 @@ table .pc-view { display:revert; }
 @media all and (max-width:1024px) {
 	#intro .intro-wrap.on .intro-txt-box > * { position:static; text-align:center;}
 	.intro-logo { width:100%; }
+
+	/*=======================================
+	상단 영역 - 1024px
+	========================================*/
+	.header-left .logo { width:78%; }
+	#header .gnb > li { margin:0 12px; }
+	#header .gnb > li > a { font-size:19px; }  
+	#header .gnb > li.red { padding:9px 20px 10px; }
 }
 
 @media all and (max-width:768px) { /* 패드, 탭, 모바일 */
