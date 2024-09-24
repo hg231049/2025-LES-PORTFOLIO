@@ -147,9 +147,10 @@
 .etc-project-wrap { max-width:2000px; width:100%; height:var(--etc-project-height); margin:0 auto; overflow:hidden; }
 .etc-project-wrap .main-title h2 { left:0; }  
 .etc-project-wrap .swiper-container { margin:35px 0 0; overflow:visible; }
-.etc-project-wrap .etc-box .prdList { display:flex; align-items:baseline; margin:0 0 0 -4.9%; }
+.etc-project-wrap .etc-box .prdList { display:flex; align-items:flex-start; margin:0 0 0 -4.9%; }
 .etc-project-wrap .etc-box .prdList > li { display:flex; position: relative; width:30%; margin:0; box-sizing:border-box; transition:0.4s ease-in-out; opacity:0.6; }
 .etc-project-wrap .etc-box .prdList > li .etc-slide { width:100%; margin:0 auto; padding:0 3.705%;  }
+.etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail { position:relative; }
 .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb { display:block; max-height:340px; overflow:hidden; }
 .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb img { width:100%; } 
 .etc-project-wrap .etc-box .prdList > li .etc-slide .description { display:none; padding:40px 0 0; color:var(--sub-color); text-align:center; }
@@ -157,7 +158,8 @@
 .etc-project-wrap .etc-box .prdList > li .etc-slide .description h3 { font-size:30px; font-weight:700; }
 .etc-project-wrap .etc-box .prdList > li .etc-slide .description p { padding-top:15px; font-size:16px; font-weight:400; }
 .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:40%; opacity:1; }
-.etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { max-height:380px;  }
+.etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail::after { content:""; position:absolute; bottom:15px; right:15px; width:40px; height:40px; border-radius:100%; background:var(--sub-color) url(../img/view-btn.png) center 50% no-repeat;  background-size:50%; box-shadow:1px 1px 11px rgba(138, 138, 138, 0.8); }
+.etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { max-height:380px; }
 .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .description { display:block; }
 .thumb-detail { display:none; }
 .dimmed { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.8; filter:alpha(opacity=80); z-index:400; }
@@ -243,6 +245,27 @@
      .main-project-wrap .project-wrap-bottom .project-box > * { width:100%; }
      .project-wrap-bottom .project-box .project-desc-box { padding:50px 0 0; }
      .project-wrap-bottom .project-box .mo-thumb { height:58%; }
+
+    /* etc 프로젝트 */
+    .etc-project-wrap { max-width:100%; }
+    .etc-project-wrap .swiper-container { min-height:100%; margin:0; padding:0 0 35px; }
+    .etc-project-wrap .etc-box {  }
+    .etc-project-wrap .etc-box .prdList { margin:0; }
+    .etc-project-wrap .etc-box .prdList > li .etc-slide { padding:0; }
+    .etc-project-wrap .etc-box .prdList > li .prd-item { width:100%; margin:0; padding:0; }
+    .etc-project-wrap .etc-box .prdList > li .prd-item > a { width:100%; }
+    .etc-project-wrap .etc-box .prdList > li .prd-item .thumbnail { width:100%; height:auto; }
+    .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb,
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { height:300px; }
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:auto; opacity:1; }
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .thumbnail { width:100%; height:auto; }
+    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .description { width:100%; }
+    .etc-project-wrap .thumb-wrap { width:89%; }
+    .etc-project-wrap .thumb-wrap img { width:100%; }
+    .etc-project-wrap .btn-box { padding:30px 0 50px; }
+    .etc-project-wrap .swiper-scrollbar { left:0; bottom:0; width:100%; height:2px; background:var(--sub-color); border-radius:0; }
+    .etc-project-wrap .swiper-scrollbar-drag { background:#121212; border-radius:0; }
+    .etc-project-wrap .swiper-control { display:none; }
 }
 
 @media all and (max-width:768px) {
@@ -311,27 +334,8 @@
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:60px; }
     .project-wrap-bottom .project-box .project-desc-box p { font-size:15px; }
 
-    /* etc 프로젝트 */
-    .etc-project-wrap { max-width:100%; }
-    .etc-project-wrap .swiper-container { min-height:100%; margin:0; padding:0 0 35px; }
-    .etc-project-wrap .etc-box {  }
-    .etc-project-wrap .etc-box .prdList { margin:0; }
-    .etc-project-wrap .etc-box .prdList > li .etc-slide { padding:0; }
-    .etc-project-wrap .etc-box .prdList > li .prd-item { width:100%; margin:0; padding:0; }
-    .etc-project-wrap .etc-box .prdList > li .prd-item > a { width:100%; }
-    .etc-project-wrap .etc-box .prdList > li .prd-item .thumbnail { width:100%; height:auto; }
-    .etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail .thumb,
-    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { height:300px; }
-    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:auto; opacity:1; }
-    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .thumbnail { width:100%; height:auto; }
-    .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .prd-item .description { width:100%; }
-    .etc-project-wrap .thumb-wrap { width:89%; }
-    .etc-project-wrap .thumb-wrap img { width:100%; }
-    .etc-project-wrap .btn-box { padding:30px 0 50px; }
-    .etc-project-wrap .swiper-scrollbar { left:0; bottom:0; width:100%; height:2px; background:var(--sub-color); border-radius:0; }
-    .etc-project-wrap .swiper-scrollbar-drag { background:#121212; border-radius:0; }
-    /* 좌우 버튼 */
-    .etc-project-wrap .swiper-control { display:none; }
+
+    
 }
 
 @media all and (max-width:400px) {
