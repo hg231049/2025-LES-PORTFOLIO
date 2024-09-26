@@ -72,7 +72,7 @@ function mainSizeListener() {
 	}, 1000);
 
 	if ( $(window).outerWidth() <= 1024) {
-		initSwiper(true, 10, 1.3);
+		initSwiper(true, 10, 1.2);
 	} else {
 		initSwiper(true, 0, 'auto');
 	}
