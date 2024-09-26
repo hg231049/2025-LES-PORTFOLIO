@@ -286,6 +286,7 @@
 @media all and (max-width:768px) {
     /* pc & mo 보기 설정 */
 	.pc-img,
+    .btn-box > .site-btn.pc-btn,
     .btn-box > .link-btn.pc-btn { display:none; }
 	.mo-img,
     .btn-box > .site-btn.mo-btn,
@@ -305,6 +306,7 @@
     .main-visual .scroll-down > span { width:70%; }
 
     /* 타이틀 공통 */
+    #main .about-wrap .main-title { width:70%; }
     #main .main-title h2 { width:27%; }
     #main .about-wrap .main-title h2 { width:22%; }
     #main .main-title p { width:64%; }
@@ -351,7 +353,10 @@
     .project-wrap-bottom .project-box .pc-thumb { height:380px; }
     .project-wrap-bottom .project-box .mo-thumb { height:58%; }
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:60px; }
-    .project-wrap-bottom .project-box .project-desc-box p { font-size:15px; }
+    .project-wrap-bottom .project-box .project-desc-box p { font-size:15px; text-align:left; }
+
+    /* etc 프로젝트 */
+    .etc-project-wrap .etc-box .prdList > li .etc-slide .description p { text-align:left; }
 
 
     
