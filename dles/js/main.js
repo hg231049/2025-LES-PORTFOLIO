@@ -142,7 +142,13 @@ $(document).ready(function(){
 			$('body').css("overflow","");
 		});
 	});
-	 /* 동영상 닫기 */
+
+	 /* 흐르는 배경 */
+	 $('.contact-wrap .contact-bg').each(function() {
+        for (var i = 0; i < 10; i++ ) {
+            $(this).find('img').clone().appendTo($(this).find('span'));
+        }
+    });
    
 });
 
