@@ -125,8 +125,7 @@ $(document).ready(function(){
 		});
 	});
 
-	/* etc 팝업 */
-	/*main-prd3 동영상 열기1 */
+	/* etc-slide의 팝업(상세) 이미지 열기 */
 	$(".etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail").each(function(){
 		var thumbSrc = $(this).children('.thumb-detail').find("img");
 		$(this).click(function(e) {
@@ -143,7 +142,7 @@ $(document).ready(function(){
 		});
 	});
 
-	 /* 흐르는 배경 */
+	 /* contac 상단 흐르는 배경 */
 	 $('.contact-wrap .contact-bg').each(function() {
         for (var i = 0; i < 10; i++ ) {
             $(this).find('img').clone().appendTo($(this).find('span'));

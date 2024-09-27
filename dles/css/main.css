@@ -126,6 +126,7 @@
 .introduce-txt > .sub-introduce { position:relative; display:inline-block; margin:0 auto; padding-top:55px; color:#121212; font-size:27px; text-align:center; line-height:1.8; }
 .introduce-txt > .sub-introduce::before { content:""; position:absolute; top:50%; left:-10%; width:66px; height:53px; transform:translateY(-50%); background:url(../img/introduce-icon1.png) no-repeat 100%; }
 .introduce-txt > .sub-introduce::after { content:""; position:absolute; top:50%; right:-10%; width:66px; height:53px; transform:translateY(-50%); background:url(../img/introduce-icon2.png) no-repeat 100%; }
+.sub-introduce > span { padding:0 0 3px; border-bottom:1px solid #121212; }
 
 /* 띠 배너 */
 .flow-line-box { white-space:nowrap; overflow:hidden; }
@@ -171,7 +172,7 @@
 .etc-project-wrap .etc-box .prdList > li .etc-slide .description h3 span { display:block; font-size:18px; font-weight:500; opacity:0.8; }
 .etc-project-wrap .etc-box .prdList > li .etc-slide .description > ul { padding-top:20px; font-size:16px; font-weight:400; }
 .etc-project-wrap .etc-box .prdList > li.swiper-slide-active { width:40%; opacity:1; }
-.etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail::after { content:""; position:absolute; bottom:15px; right:15px; width:40px; height:40px; border-radius:100%; background:var(--sub-color) url(../img/view-btn.png) center 50% no-repeat;  background-size:50%; box-shadow:1px 1px 11px rgba(138, 138, 138, 0.8); }
+.etc-project-wrap .etc-box .prdList > li .etc-slide .thumbnail::after { content:""; position:absolute; bottom:15px; right:15px; width:40px; height:40px; border-radius:100%; background:var(--sub-color) url(../img/view-btn.png) center 50% no-repeat;  background-size:50%; box-shadow:1px 1px 11px rgba(138, 138, 138, 0.8); z-index:999; }
 .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .etc-slide .thumbnail .thumb { max-height:380px; }
 .etc-project-wrap .etc-box .prdList > li.swiper-slide-active .description { display:block; }
 .thumb-detail { display:none; }
@@ -199,7 +200,7 @@
 
 /* contact */
 .contact-wrap { position:relative; background:var(--sub-color); }
-.contact-wrap .contact-bg { position:absolute; top:0; left:0; width:100%; animation:flowTxt 18s linear Infinite; }
+.contact-wrap .contact-bg { position:absolute; top:0; left:0; width:100%; animation:flowTxt 18s linear Infinite; z-index:999; }
 .contact-wrap .contact-bg span { display:flex; }  
 .contact-wrap .contact-bg img { width:100%; vertical-align:top; }
 .contact-wrap .contact-bg img:nth-child(even) { transform:scaleX(-1); } 
@@ -386,14 +387,14 @@
     .project-wrap-bottom .project-box .mo-thumb { height:58%; }
     .project-wrap-bottom .project-box .project-desc-box { text-align:left; }
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:60px; }
-    .project-wrap-bottom .project-box .project-desc-box > ul:not(.btn-box){ padding:30px 0 0 20px; font-size:15px; }
+    .project-wrap-bottom .project-box .project-desc-box > ul:not(.btn-box){ padding:30px 0 0 20px; font-size:14px; }
 
     /* etc 프로젝트 */
     #etc .main-inner { padding:0; }
     .etc-project-wrap .etc-box .prdList > li .etc-slide .description { padding:20px 0 0; text-align:left; }
     .etc-project-wrap .etc-box .prdList > li .etc-slide .description h3 { font-size:25px; }
     .etc-project-wrap .etc-box .prdList > li .etc-slide .description h3 span { font-size:16px; }
-    .etc-project-wrap .etc-box .prdList > li .etc-slide .description p { font-size:15px; }
+    .etc-project-wrap .etc-box .prdList > li .etc-slide .description p { font-size:14px; }
 
 
 
