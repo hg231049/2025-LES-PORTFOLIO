@@ -72,6 +72,8 @@ table .pc-view { display:revert; }
 	#header .gnb { display:flex; justify-content:space-between; }
 	#header .gnb > li { text-align:center; }
 	#header .gnb > li > a { color:#121212; font-size:15px; text-wrap:nowrap; }
+	#header .gnb > li.on > a { font-weight:700; }
+	#header .gnb > li.on::after,
 	#header .gnb > li.red { display:none; }
 	
 

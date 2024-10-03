@@ -17,7 +17,7 @@
 /*========================================================================
 메인 비주얼
 ========================================================================*/
-.main-visual { position:relative; max-width:2000px; width:100%; height:100%; margin:0 auto; overflow:hidden; opacity:0; }
+.main-visual { position:relative; max-width:2000px; width:100%; height:100vh; margin:0 auto; overflow:hidden; opacity:0; }
 .main-visual .main-image img { width:100%; vertical-align:top; }
 .visual-dimmed { position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); width:10%; height:10%; background:rgba(13,26,19, 0.2); border-radius:100%; transition:0.7s ease-in-out; }
 .visual-dimmed.show { width:100%; height:100%; border-radius:0; }
@@ -63,7 +63,7 @@
 
 /* 타이틀 공통 */
 #main .main-title { position:relative; display:flex; justify-content:center; padding:0 0 65px; line-height:1; }
-#main .main-title h2 { position:absolute; top:0; max-width:214px; }
+#main .main-title h2 { position:absolute; top:0; max-width:130px; }
 #main .main-title p { max-width:474px; margin:0 40px;}
 #main .main-title img { width:100%; vertical-align:top; }
 
@@ -104,6 +104,8 @@
 .about-desc > ul > li > * { color:var(--sub-color); text-decoration:none; }
 .about-desc > ul > li > strong { display:block; font-size:24px; }
 .about-center { margin:0 3.334%; }
+.about-center .about-visual { position:relative; }
+.about-center .about-visual::after { content:""; position:absolute; bottom:0; left:-50px; width:36px; height:38px; background:url(../img/arrow.png) no-repeat; background-size:100%; transform:rotate(270deg); transition:0.4s ease-in-out; }
 .about-center > span { display:block; width:100%; margin:0 auto; border:1px solid var(--sub-color); }
 .about-center > span > img { width:100%; vertical-align:top; transition:0.6s ease-in-out; }
 
@@ -111,10 +113,11 @@
 .skill-wrap .skill-box { margin:0 0 50px; color:#121212; font-size:16px; text-align:center; }
 .skill-wrap .skill-box > ul { display:flex; flex-wrap:wrap; justify-content:center; position:relative; }
 .skill-wrap .skill-box > ul > li { margin:0 20px 40px 20px; }
-.skill-wrap .skill > li { position:relative; }
+.skill-wrap .skill-box > ul > li > p { padding-top:15px; line-height:1; }
+.skill-wrap .skill > li > div { position:relative; }
 .skill-wrap .skill > li span { position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
 .skill-wrap .tools li img { border-radius:50%; width:90px; vertical-align:top; }
-.skill-wrap .tools li p { padding-top:15px; line-height:1; }
+
 
 .introduce-wrap .mid-line { position:relative; }
 .main-box3 .introduce-wrap .mid-line::after { content:""; position:absolute; top:-100px; left:50%; width:1px; height:0; background:var(--main-color); transition:0.8s ease-in-out; }
@@ -124,8 +127,6 @@
 .introduce-txt > .main-introduce { max-width:812px; margin:0 auto; }
 .introduce-txt > .main-introduce > img { width:100%; vertical-align:top; }
 .introduce-txt > .sub-introduce { position:relative; display:inline-block; margin:0 auto; padding-top:55px; color:#121212; font-size:27px; text-align:center; line-height:1.8; }
-.introduce-txt > .sub-introduce::before { content:""; position:absolute; top:50%; left:-10%; width:66px; height:53px; transform:translateY(-50%); background:url(../img/introduce-icon1.png) no-repeat 100%; }
-.introduce-txt > .sub-introduce::after { content:""; position:absolute; top:50%; right:-10%; width:66px; height:53px; transform:translateY(-50%); background:url(../img/introduce-icon2.png) no-repeat 100%; }
 .sub-introduce > span { padding:0 0 3px; border-bottom:1px solid #121212; }
 
 /* 띠 배너 */
@@ -200,10 +201,10 @@
 
 /* contact */
 .contact-wrap { position:relative; background:var(--sub-color); }
-.contact-wrap .contact-bg { position:absolute; top:0; left:0; width:100%; animation:flowTxt 18s linear Infinite; z-index:999; }
+.contact-wrap .contact-bg { position:absolute; top:0; left:0; width:100%; animation:flowTxt 18s linear Infinite; z-index:9; }
 .contact-wrap .contact-bg span { display:flex; }  
 .contact-wrap .contact-bg img { width:100%; vertical-align:top; }
-.contact-wrap .contact-bg img:nth-child(even) { transform:scaleX(-1); } 
+.contact-wrap .contact-bg img:nth-child(even) { margin-left:-1px; transform:scaleX(-1); } 
 .contact-box { display:flex; justify-content:center; align-items:center; height:100%; padding:304px 0 150px; }
 .contact-box > * { padding:0 8%; text-align:center; }
 .contact-box > * img { width:100%; }
@@ -216,6 +217,9 @@
 .contact-info ul li strong { padding-right:15px; }
 
 @media all and (max-width:1600px) { 
+    /* 메인 비주얼 */
+    .main-visual { height:100%; }
+
     /* 메인 프로젝트 */
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:90px; }
 }
@@ -268,6 +272,7 @@
      .about-flex { display:block; }
      .about-flex > * { width:100%; }
      .about-center { margin:65px 0 20px 0; }
+     .about-center .about-visual::after { top:-50px; right:0; left:auto; transform:rotate(0deg); }
 
      /* 메인 프로젝트 */
      .main-project-wrap .project-wrap-bottom { padding-top:50px; }
@@ -324,7 +329,8 @@
     .btn-box > .link-btn.mo-view { display:flex; }
 
     /* 메인 비쥬얼 */
-    .main-visual { height:100%; }
+    .main-visual,
+    .main-visual .main-image img { height:100vh; }
     .main-visual > a > div.main-visual-title ul { top:calc(50% - 60px); width:60%; }
     .main-visual > a > div.main-visual-title ul > .sub-tit { font-size:19px;}
     .main-visual > a > div.main-visual-title ul > .main-txt1 { margin-bottom:30px; }
@@ -360,19 +366,16 @@
     .about-desc > ul > li { font-size:16px; }
     .about-desc > ul > li > strong { font-size:19px; }
     #main .skill-wrap .main-title p { width:50%; }
+    .about-center .about-visual::after { width:25px; height:26px; }
     .skill-wrap .skill-box { font-size:12px; }
     .skill-wrap .skill-box > ul > li { margin:0 10px 20px 10px; }
     .skill-wrap .skill-box > ul > li canvas,
     .skill-wrap .tools li img { width:80px; height:80px; }
     .introduce-box { padding-top:70px; }
     .introduce-txt > .sub-introduce { width:95%; padding-top:35px; font-size:15px; }
-    .introduce-txt > .sub-introduce br,
-    .introduce-txt > .sub-introduce::before,
-    .introduce-txt > .sub-introduce::after { display:none; }
 
-    /* line 배너 */
-    
-    .flow-inner { animation:flowTxt 8s linear Infinite; }
+    /* flow line 배너 */
+    .flow-inner { animation:flowTxt 7s linear Infinite; }
     .flow-line-box em { font-size:30px; }
     .flow-line-box em span img { width:6%; vertical-align:middle; }
 
@@ -396,7 +399,7 @@
     .etc-project-wrap .etc-box .prdList > li .etc-slide .description h3 span { font-size:16px; }
     .etc-project-wrap .etc-box .prdList > li .etc-slide .description p { font-size:14px; }
 
-
+    .contact-wrap .contact-bg { animation:flowTxt 8s linear Infinite; }
 
     
 }
