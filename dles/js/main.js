@@ -81,6 +81,7 @@ function mainSizeListener() {
 $(window).resize(function(){
 	mainSizeListener();
 });
+
 $(document).ready(function(){
 	
 	$(window).scroll(showDiv);
@@ -89,17 +90,12 @@ $(document).ready(function(){
    /* 메인 슬라이드 배너 */
 	$(".main-visual").css('opacity','1');
 	
-	/* 흐르는 텍스트 */
-    $('.flow-line-box').each(function() {
-        for (var i = 0; i < 10; i++ ) {
-            $(this).find('.flow-txt em').clone().appendTo($(this).find('.flow-inner'));
-        }
-    });
-
+	
+	/* skill 애니메이션 */
 	$('.skill-box .skill').each(function() {
 		skillOption = {
 			animate:{
-				duration: 3000, // 애니메이션 시간
+				duration: 5000, // 애니메이션 시간
 				enabled: true
 			},
 			barColor:'#b53720',  // 바 색상
@@ -113,6 +109,13 @@ $(document).ready(function(){
 		$('.skill3').easyPieChart(skillOption);  
 	});
 
+	/* 흐르는 텍스트 */
+    $('.flow-line-box').each(function() {
+        for (var i = 0; i < 10; i++ ) {
+            $(this).find('.flow-txt em').clone().appendTo($(this).find('.flow-inner'));
+        }
+    });
+	
 	/* 메인프로젝트 모션 */ 
 	$('.project-box').each(function() {
 		$(this).children('.bn').each(function() {

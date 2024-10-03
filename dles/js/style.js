@@ -22,7 +22,4 @@ $(document).ready(function(){
     $('#header').load('./dles/layout/header.html');
     $('#contents').load('./dles/pages/main.html');
     
-   
-  
-   
 });
