@@ -62,7 +62,7 @@
 
 /* 타이틀 공통 */
 #main .main-title { position:relative; display:flex; justify-content:center; padding:0 0 65px; line-height:1; }
-#main .main-title h2 { position:absolute; top:0; max-width:130px; }
+#main .main-title h2 { position:absolute; top:0; max-width:214px; }
 #main .main-title p { max-width:474px; margin:0 40px;}
 #main .main-title img { width:100%; vertical-align:top; }
 
@@ -95,7 +95,7 @@
 #main .about-wrap > * { display:flex; }
 #main .about-wrap .main-title { display:block; width:33.33%; padding:0; }
 #main .about-wrap .main-title p { max-width:438px; margin:80px 0 0; }
-#main .about-wrap .main-title h2 { position:static; }
+#main .about-wrap .main-title h2 { position:static; max-width:130px; }
 .about-flex { display:flex; justify-content:center; align-items:flex-end; width:66.66%; }
 .about-flex > * { width:50%; }
 .about-desc { color:var(--sub-color); text-align:left; }
@@ -236,9 +236,11 @@
     #main .about-wrap .main-title h2 { width:30%; margin:0; }
     #main .main-title > p { width:80%; margin:40px auto 0;}
 
+    /* about */
     .about-flex { width:100%; }
     .about-flex > * { width:50%; }
     .about-center { margin:65px 3.334% 0 0; }
+    .about-center .about-visual::after { top:-50px; right:0; left:auto; transform:rotate(0deg); }
 
     /* 메인 프로젝트 */
     .project-wrap-bottom .project-box .project-desc-box h3 { font-size:80px; }
@@ -272,7 +274,6 @@
     .about-flex { display:block; }
     .about-flex > * { width:100%; }
     .about-center { margin:65px 0 20px 0; }
-    .about-center .about-visual::after { top:-50px; right:0; left:auto; transform:rotate(0deg); }
 
      /* 메인 프로젝트 */
      .main-project-wrap .project-wrap-bottom { padding-top:50px; }
