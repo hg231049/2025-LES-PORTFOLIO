@@ -99,7 +99,7 @@
 .about-flex { display:flex; justify-content:center; align-items:flex-end; width:66.66%; }
 .about-flex > * { width:50%; }
 .about-desc { color:var(--sub-color); text-align:left; }
-.about-desc > ul > li { padding:8px 15px; font-size:20px; line-height:1.5; border-bottom:1px solid var(--sub-color); text-decoration:none; }
+.about-desc > ul > li { position:relative; padding:8px 15px; font-size:20px; line-height:1.5; border-bottom:1px solid var(--sub-color); text-decoration:none; }
 .about-desc > ul > li > * { color:var(--sub-color); text-decoration:none; }
 .about-desc > ul > li > strong { display:block; font-size:24px; }
 .about-center { margin:0 3.334%; }
@@ -116,7 +116,7 @@
 .skill-wrap .skill > li > div { position:relative; }
 .skill-wrap .skill > li span { position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
 .skill-wrap .tools li img { border-radius:50%; width:90px; vertical-align:top; }
-
+.skill-wrap .tools li:last-child img { border:1px solid #121212; }
 
 .introduce-wrap .mid-line { position:relative; }
 .main-box3 .introduce-wrap .mid-line::after { content:""; position:absolute; top:-100px; left:50%; width:1px; height:0; background:var(--main-color); transition:0.8s ease-in-out; }
