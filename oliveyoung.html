@@ -8,8 +8,7 @@
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap');
         body { margin:0; padding:0; }
         body .speedycat-container { max-width:800px !important; }
         #eventWrap { max-width:800px; width:100%; margin:0 auto; color:#666; font-size:24px; text-align:center; font-family:'Roboto', sans-sefif; box-sizing:border-box; }
@@ -21,8 +20,10 @@
         .sr-only { position:absolute; overflow:hidden; width:1px; height:1px; padding:0; margin:-1px; border:0; clip:rect(0,0,0,0); }
         .content-box { position:relative; overflow:hidden; }
         .txt-box { position:absolute; left:0; width:100%; line-height:1.1; box-sizing:border-box; }
+        .base-color { color:#67379d; }
         .black-color { color:#000; }
-        .notice-color { font-size:16px; color:#737373; } 
+        .notice-color { font-size:16px; color:#737373; }
+        .point-color { color:#c2896bv; } 
         .fw-bold { font-weight:700; }
         .fw-semibold { font-weight:500; }
         .fw-normal { font-weight:400; }
@@ -36,486 +37,486 @@
         .link-box { display:flex; position:absolute; bottom:51px; width:100%; height:340px; }
         .link-box a { flex:1; }
         .gif-box { position:absolute; width:100%; }
-        
-        .box1 .txt-box1 { top:13.8%; padding-left:56.5%;}
-        .box1 .txt-box1 h2 { font-size:30px; text-align:left; line-height:1.5; font-weight:700; }
-        .box1 .txt-box1 h2 span { font-size:22px; font-weight:500;}
     
-        .box2 .txt-box1 { top:7.8%; }
-        .box2 .txt-box1 h2 { padding-bottom:11%; font-size:50px; color:#000; }
+        .box1 .txt-box1 { top:30.8%; padding-left:56.5%; }
+        .box1 .txt-box1 h2 { font-size:30px; text-align:left; line-height:1.5; }
+        .box1 .txt-box1 h2 span { font-size:22px; }
+    
+        .box2 .txt-box1 { top:3.8%; }
+        .box2 .txt-box1 h2 { padding-bottom:35%; font-size:50px; color:#000; }
         .box2 .txt-box1 h2 span { padding:0 5px 3px; border-bottom:2px solid #000; }
-        .box2 .txt-box1 p { font-size:34px; color:#000000; font-weight:300; }
+        .box2 .txt-box1 p { color:#000; font-size:35px; }
     
-        .box2 .txt-box2 { top:22.3%; padding-left:44%; color:#106443; }
-        .box2 .txt-box2 h2 { font-size:76px; }
+        .box2 .txt-box2 { top:18.6%; color:#579be1; }
+        .box2 .txt-box2 h2 { font-size:55px; color:#579be1; }
+        .box2 .txt-box2 p { font-size:25px; }
     
-        .box2 .txt-box3 { bottom:1%; padding-left:4%; text-align:left; color:#000; }
-        .box2 .txt-box3 p { font-size:19px; line-height:1.5; }
+        .box2 .txt-box3 { top:67.8%; padding-left:5%; color:#579be1; text-align:left; }
+        .box2 .txt-box3 h2 { padding-bottom:8%; font-size:52px; }
+        .box2 .txt-box3 p { color:#000; font-size:28px; }
+        .box2 .txt-box3 p strong { display:inline-block; padding: 0 2% 0 0; color:#fff; font-weight:700; }
+        .box2 .txt-box3 h2 span { color:#000; font-weight:700; }
+        .box2 .txt-box3 p span { color:#579be1; font-weight:700; }
     
-        .box3 .txt-box1 { top:6.8%; padding-left:15%; text-align:left; }
-        .box3 .txt-box1 p { font-size:48px; color:#000; font-weight:300; line-height:1.2; }
+        .box3 .txt-box1 { top:7.8%; }
+        .box3 .txt-box1 h2 { padding-bottom:158%; font-size:50px; color:#000; }
+        .box3 .txt-box1 h2 span { padding:0 5px 3px; border-bottom:2px solid #000; }
     
-        .box3 .txt-box2 { top:20.9%; color:#000000; }
-        .box3 .txt-box2 strong { color:#0f6443; font-size:25px; font-weight:700; }
-        .box3 .txt-box2 p { padding-bottom:12%; font-size:22px; font-weight:300; }
-        .box3 .txt-box2 p:nth-child(3) { padding-bottom:15%; }
-    
-        .box3 .txt-box3 { top:60.5%; }
-        .box3 .txt-box3 p { padding-bottom:33%; color:#6a6a6a; font-size:11px; font-weight:300; }
-        .box3 .txt-box3 p + p { font-size:26px; }
-        .box3 .txt-box3 h2 { padding-bottom:40%; color:#0e6443; font-size:41px; }
-    
-        .box4 .txt-box1 { top:5.8%; }
-        .box4 .txt-box1 h2 { padding-bottom:20%; font-size:50px; color:#000; }
-        .box4 .txt-box1 h2 span { padding:0 5px 3px; border-bottom:2px solid #000; }
-        .box4 .txt-box1 p { font-size:34px; color:#115e3f; font-weight:400; }
-        .box4 .txt-box1 p strong { font-size:40px; font-weight:700; }
-    
-        .box4 .txt-box2 { top:51%; } 
-        .box4 .txt-box2 h2 { padding-bottom:34%; color:#363636;  font-size:34px; font-weight:500; }
-        .box4 .txt-box2 h2 + h2 { padding-bottom:30%; }
-    
-        .box4 .txt-box3 { top:53.3%; color:#575757;} 
-        .box4 .txt-box3 p { padding-bottom:31%; color:#363636; font-size:20px; }
-        .box4 .txt-box3 p span { display:block; padding: 2% 0 0; font-size:14px; font-weight:300; }
+        .box3 .txt-box2 { top:28.6%; padding-left:12%; text-align:left; }
+        .box3 .txt-box2 p { font-size:50px; color:#000; }
+        .box3 .txt-box2 h2 { font-size:50px; color:#579be1; }
         
-        .box4 .txt-box4 { top:88%; padding-left:45%; text-align:left; color:#363636;} 
-        .box4 .txt-box4 h2 { padding-bottom:3%; font-size:40px; }
-        .box4 .txt-box4 p {  font-size:25px; font-weight:300; }
+        .box3 .txt-box3 {  top:47.6%; padding-left:12%; text-align:left; }
+        .box3 .txt-box3 p { padding-bottom:5%; font-size:28px; color:#000; }
+        .box3 .txt-box3 p strong { color:#c1213e; }
+        .box3 .txt-box3 p span { color:#579be1; font-weight:500; }
+        .box3 .txt-box3 h2 { padding-top:10%; font-size:22px; color:#000; font-weight:300; }
     
-        .box5 .txt-box1 { top:9.3%; color:#363636; } 
-        .box5 .txt-box1 h2 { padding-bottom:5%; font-size:37px; line-height:1.3; }
-        .box5 .txt-box1 h2 span { font-weight:300; }
-        .box5 .txt-box1 p { padding-bottom:2%; font-size:23px; font-weight:300; }
-        .box5 .txt-box1 p + p { font-size:12px; }
+        .box4 .txt-box1 { top:5.6%; }
+        .box4 .txt-box1 p { padding-bottom:3%; font-size:26px; color:#fff; font-weight:500; }
+        .box4 .txt-box1 h2 { font-size:52px; color:#579be1; }
+        .box4 .txt-box1 h2 span { color:#2f2f2f; font-weight:400; }
     
-        .box5 .txt-box2 { top:54.3%; padding-right:5%; text-align:right; color:#fff; } 
-        .box5 .txt-box2 p { font-size:17px; font-weight:300; }
+        .box4 .txt-box2 { top:22.8%; padding-left:27%; text-align:left; color:#c1213e; }
+        .box4 .txt-box2 p { padding-bottom:3.5%; font-size:30px; font-weight:500; }
+        .box4 .txt-box2 p:nth-child(3) { padding-bottom:5.5%; }
+        .box4 .txt-box2 p span { color:#2f2f2f; }
     
-        .box5 .txt-box3 { top:69.6%;  color:#000000; } 
-        .box5 .txt-box3 h2 { padding-bottom:77%; font-size:44px; font-weight:300; line-height: 1.3; }
-        .box5 .txt-box3 h2 span { display:block; padding-right:24%; font-size:43px; font-weight:700; }
-        .box5 .txt-box3 p { font-size:12px; font-weight:300; line-height: 1.5; }
-    
-        .box5 .txt-box4 { top:79.8%; padding-left:12%; text-align:left; color:#000; } 
-        .box5 .txt-box4 h2 { padding-bottom:11%; font-size:26px; font-weight:400; }
-    
-        .box5 .txt-box5 { top:74%; padding-right:12%; text-align:right; color:#000; } 
-        .box5 .txt-box5 p { font-size:12px; font-weight:300; }
+        .box4 .txt-box3 { top:51.2%; padding-right:46%; color:#fff; }
+        .box4 .txt-box3 p { padding-bottom:59.5%; font-weight:500; font-size:20px; }
         
-        .box6 .txt-box1 { top:9.3%; color:#000;} 
-        .box6 .txt-box1 p { padding-bottom:88%; font-size:30px; font-weight:300; }
-        .box6 .txt-box1 p + p { padding-bottom:141%; }
-        .box6 .txt-box1 p strong { color:#21694e; font-size:40px; }
+        .box4 .txt-box4 { top:51.2%; padding-left:46%; color:#fff; }
+        .box4 .txt-box4 p { padding-bottom:59.5%; font-weight:500; font-size:20px; }
     
-        .box6 .txt-box2 { top:24.3%; color:#000;} 
-        .box6 .txt-box2 p { padding-bottom:147%; font-size:12px; font-weight:300; }
-        .box6 .txt-box2 p + p { padding-bottom:93%; }
+        .box4 .txt-box5 { top:86.2%; padding-left:8%; text-align:left; color:#000; }
+        .box4 .txt-box5 p { font-size:16px; }
     
-        .box6 .txt-box3 { top:83.8%; display:flex; justify-content: space-evenly; align-items: center; padding: 0 15% 0 13%; color:#000000; } 
-        .box6 .txt-box3 p { font-size:19px; }
-        .box6 .txt-box3 p strong { font-size:24px; }
+        .box5 .txt-box1 { top:5.8% }
+        .box5 .txt-box1 h2 {font-size:52px; color:#000; font-weight:500; }
+        .box5 .txt-box1 h2 span { color:#579be1; }
+        .box5 .txt-box1 p {  padding-bottom:3%; color:#fff; font-size:26px; letter-spacing: -1px; }
     
-        .box7 .txt-box1 { top:6.8%; color:#000; }
-        .box7 .txt-box1 h2 { padding-bottom:3%; font-size:40px; }
-        .box7 .txt-box1 h2 span { font-weight:300; }
-        .box7 .txt-box1 p { font-size:25px; color:#000; font-weight:300; }
+        .box5 .txt-box2 { top:40.8%; padding-right:42%; }
+        .box5 .txt-box2 p { padding-bottom:49%; color:#000; font-size:25px; letter-spacing: -1px; }
+        .box5 .txt-box2 p + p { padding-bottom:42%; }
     
-        .box7 .txt-box2 { top:53.6%;  color:#2d2c2a; }
-        .box7 .txt-box2 h2 { padding-bottom:69%; font-size:50px; font-weight:500; }
-        .box7 .txt-box2 p { font-size:40px; font-weight:300;  }
+        .box5 .txt-box3 { top:40.8%; padding-left:42%; }
+        .box5 .txt-box3 p { padding-bottom:49%; color:#000; font-size:25px; letter-spacing: -1px; }
+        .box5 .txt-box3 p + p { padding-bottom:42%; }
     
-        .box7 .txt-box3 { top:57.4%; padding-left:14%; text-align:left; color:#2d2c2a; }
-        .box7 .txt-box3 p { font-size:25px; font-weight:300; line-height:1.9;  }
-        .box7 .txt-box3 p strong { font-weight:500; }
+        .box5 .txt-box4 { top:77.8%; padding-right:59%; }
+        .box5 .txt-box4 p { color:#b70118; font-size:26px; letter-spacing: -1px; font-weight:500; }
     
-        .box7 .txt-box4 { top:79.3%; color:#205153; }
-        .box7 .txt-box4 h2 { padding-bottom:17%; font-size:29px; font-weight:500; }
-        .box7 .txt-box4 h2 + h2 { padding-bottom:17.3%; line-height:1.2; }
+        .box5 .txt-box5 { bottom:5%; }
+        .box5 .txt-box5 p { color:#747474; font-size:16px; letter-spacing: -1px; font-weight:500; }
     
-        .box7 .txt-box5 { top:80.7%; color:#2d2c2a; }
-        .box7 .txt-box5 p {  padding-bottom:14%; font-size:23px; font-weight:300; line-height:1.3;  }
-        .box7 .txt-box5 p + p { padding-bottom:19%; }
+        .box6 .txt-box1 { top:3.2%; }
+        .box6 .txt-box1 h2 { padding-bottom:3%; font-size:39px; color:#579be1; font-weight:400; }
+        .box6 .txt-box1 p {  color:#fff; font-size:26px; letter-spacing: -1px; font-weight:500; }
     
+        .box6 .txt-box2 { top:7.8%; }
+        .box6 .txt-box2 h2 { padding-bottom:113%; font-size:52px; color:#000; font-weight:500; }
+        .box6 .txt-box2 h2 span { color:#579be1; }
+        .box6 .txt-box2 p { color:#747474; font-size:16px; letter-spacing: -1px; font-weight:500; }
+    
+        .box6 .txt-box3 { top:15.5%; padding-left:26%; text-align:left; }
+        .box6 .txt-box3 p { padding-bottom:10.8%; font-size:28px; color:#000; }
+        .box6 .txt-box3 p:nth-child(4) { padding-bottom:8.8%; }
+        .box6 .txt-box3 p strong { color:#c3304a; font-weight:500; }
+        .box6 .txt-box3 p span { font-size:17px; }
+    
+        .box6 .txt-box4 { top:51.8% }
+        .box6 .txt-box4 h2 {font-size:61px; color:#000; font-weight:700; }
+        .box6 .txt-box4 h2 span { color:#579be1; }
+    
+        .box6 .txt-box5 { top:90.5%; }
+        .box6 .txt-box5 p { padding-bottom:6%; font-size:30px; color:#000; font-weight:500; }
+        .box6 .txt-box5 p strong { color:#c3304a; font-weight:500; }
+        .box6 .txt-box5 p span { color:#579be1; }
+    
+        .box7 .txt-box1 { top:11.8%; }
+        .box7 .txt-box1 h2 { padding-bottom:30%; font-size:50px; color:#000; }
+        .box7 .txt-box1 h2 span { padding:0 5px 3px; border-bottom:2px solid #000; }
+        .box7 .txt-box1 p { color:#579be1; font-size:55px; font-weight:700; }
+    
+        .box7 .txt-box2 { top:69.7%; padding-left:24%; text-align:left; }
+        .box7 .txt-box2 p { padding-bottom:18.8%; font-size:25px; color:#6f6f6f; }
+        .box7 .txt-box2 p span { color:#579be1; }
+        
         @media (max-width: 800px){
-            #eventWrap { font-size:3vw;}
+            #eventWrap { font-size:3vw; }
     
-        .box1 .txt-box1 h2 { font-size:3.75vw;  line-height:1.5;  }
+        .box1 .txt-box1 h2 { font-size:3.75vw;  line-height:1.5; }
         .box1 .txt-box1 h2 span { font-size:2.75vw; }
     
         .box2 .txt-box1 h2 { font-size:6.25vw;  }
         .box2 .txt-box1 h2 span { padding:0 0.63vw 0.38vw; border-bottom:0.25vw solid #000; }
-        .box2 .txt-box1 p { font-size:4.25vw;   }
+        .box2 .txt-box1 p {  font-size:4.38vw; }
     
-        .box2 .txt-box2 h2 { font-size:9.50vw; }
+        .box2 .txt-box2 h2 { font-size:6.88vw;  }
+        .box2 .txt-box2 p { font-size:3.13vw; }
     
-        .box2 .txt-box3 p { font-size:2.38vw; line-height:1.5; }
+        .box2 .txt-box3 h2 { font-size:6.50vw; }
+        .box2 .txt-box3 p {  font-size:3.50vw; }
     
-        .box3 .txt-box1 p { font-size:6.00vw;   line-height:1.2; }
+        .box3 .txt-box1 h2 { font-size:6.25vw;  }
+        .box3 .txt-box1 h2 span { padding:0 0.63vw 0.38vw; border-bottom:0.25vw solid #000; }
     
-        .box3 .txt-box2 strong {  font-size:3.13vw;  }
-        .box3 .txt-box2 p { font-size:2.75vw;  }
+        .box3 .txt-box2 { top:28.6%; padding-left:12%;  }
+        .box3 .txt-box2 p { font-size:6.25vw;  }
+        .box3 .txt-box2 h2 { font-size:6.25vw;  }
+        
+        .box3 .txt-box3 p { font-size:3.50vw;  }
     
-        .box3 .txt-box3 p { font-size:1.38vw;  }
-        .box3 .txt-box3 p + p { font-size:3.25vw; }
-        .box3 .txt-box3 h2 { font-size:5.13vw; }
+        .box3 .txt-box3 h2 { font-size:2.75vw;   }
     
-        .box4 .txt-box1 h2 { font-size:6.25vw;  }
-        .box4 .txt-box1 h2 span { padding:0 0.63vw 0.38vw; border-bottom:0.25vw solid #000; }
-        .box4 .txt-box1 p { font-size:4.25vw;   }
-        .box4 .txt-box1 p strong { font-size:5.00vw;  }
+        .box4 .txt-box1 p { font-size:3.25vw;   }
+        .box4 .txt-box1 h2 { font-size:6.50vw;  }
     
-        .box4 .txt-box2 h2 { font-size:4.25vw;  }
+        .box4 .txt-box2 p { font-size:3.75vw;  }
     
         .box4 .txt-box3 p { font-size:2.50vw; }
-        .box4 .txt-box3 p span { font-size:1.75vw;  }
-        
-        .box4 .txt-box4 h2 { font-size:5.00vw; }
-        .box4 .txt-box4 p {  font-size:3.13vw;  }
     
-        .box5 .txt-box1 h2 { font-size:4.63vw; line-height:1.3; }
-        .box5 .txt-box1 p { font-size:2.88vw;  }
-        .box5 .txt-box1 p + p { font-size:1.50vw; }
+        .box4 .txt-box4 p { font-size:2.50vw; }
     
-        .box5 .txt-box2 p { font-size:2.13vw;  }
+        .box4 .txt-box5 p { font-size:2.00vw; }
     
-        .box5 .txt-box3 h2 { font-size:5.50vw;  line-height: 1.3; }
-        .box5 .txt-box3 h2 span { font-size:5.38vw;  }
-        .box5 .txt-box3 p { font-size:1.50vw;  line-height: 1.5; }
+        .box5 .txt-box1 h2 {font-size:6.50vw;   }
+        .box5 .txt-box1 p { font-size:3.25vw; letter-spacing: -0.13vw; }
     
-        .box5 .txt-box4 h2 { font-size:3.25vw;  }
+        .box5 .txt-box2 p { font-size:3.13vw; letter-spacing: -0.13vw; }
     
-        .box5 .txt-box5 p { font-size:1.50vw;  }
-     
-        .box6 .txt-box1 p {font-size:3.75vw;  }
-        .box6 .txt-box1 p strong {  font-size:5.00vw; }
+        .box5 .txt-box3 p {  font-size:3.13vw; letter-spacing: -0.13vw; }
     
-        .box6 .txt-box2 p { font-size:1.50vw;  }
+        .box5 .txt-box4 p { font-size:3.25vw; letter-spacing: -0.13vw;  }
     
-        .box6 .txt-box3 p { font-size:2.38vw; }
-        .box6 .txt-box3 p strong { font-size:3.00vw; }
+        .box5 .txt-box5 p { font-size:2.00vw; letter-spacing: -0.13vw;  }
     
-        .box7 .txt-box1 h2 { font-size:5.00vw; }
+        .box6 .txt-box1 h2 { font-size:4.88vw;   }
+        .box6 .txt-box1 p { font-size:3.25vw; letter-spacing: -0.13vw;  }
     
-        .box7 .txt-box1 p { font-size:3.13vw;   }
+        .box6 .txt-box2 h2 { font-size:6.50vw;   }
+        .box6 .txt-box2 p {  font-size:2.00vw; letter-spacing: -0.13vw;  }
     
-        .box7 .txt-box2 h2 {font-size:6.25vw;  }
-        .box7 .txt-box2 p { font-size:5.00vw;   }
+        .box6 .txt-box3 p { font-size:3.50vw;  }
+        .box6 .txt-box3 p span { font-size:2.13vw; }
     
-        .box7 .txt-box3 p { font-size:3.13vw;  line-height:1.9;  }
+        .box6 .txt-box4 h2 {font-size:7.63vw;   }
     
-        .box7 .txt-box4 h2 { font-size:3.63vw;  }
-        .box7 .txt-box4 h2 + h2 { line-height:1.2; }
+        .box6 .txt-box5 p { font-size:3.75vw;   }
     
-        .box7 .txt-box5 p { font-size:2.88vw;  line-height:1.3;  }
+        .box7 .txt-box1 h2 { font-size:6.25vw;  }
+        .box7 .txt-box1 h2 span { padding:0 0.63vw 0.38vw; border-bottom:0.25vw solid #000; }
+        .box7 .txt-box1 p {  font-size:6.88vw;  }
+    
+        .box7 .txt-box2 p { font-size:3.13vw;  }
     
         }
     </style>  
     <div id="eventWrap">
         <div class="content-box box1">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img1.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img1.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
                 <h2 class="black-color fw-bold">
-                    goodal <br>
-                    Heartleaf Calming <br>
-                    Moisture <br>
-                    Sun Cream <br>
-                    50 mL + 50 mL <br>
-                    Special Set 
+                    ma:nyo<br/>
+                    Panthetoin<br/>
+                    Cream<br/>
+                    80 mL 
                 </h2>
             </div>
         </div>
-        
         <div class="content-box box2">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img2.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img2.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
                 <h2 class="black-color fw-bold">
                     <span>Why we love it</span>
                 </h2>
-                <p>
-                    goodal Heartleaf Calming Moisture Sun Cream 
+                <p class="">
+                    200-hour lasting relief and hydration 
                 </p>
             </div>
             <div class="txt-box txt-box2">
-                <h2 class="ff-mon">
-                    Sun Cream
+                <h2>
+                    Panthetoin great for hydration
                 </h2>
+                <p class="">
+                    #DrySkin #SensitiveSkin #CalmingHydratingCream #ItchinessRelief
+                </p>
             </div>
             <div class="txt-box txt-box3">
-                <p>
-                    *Mild Sun Cream ranked No. 1, 2023 Glow Pick Awards, sun cream category <br>
-                    *Mild Sun Cream ranked No. 1, Glow Pick in August 2022, sun cream category <br>
-                    *Mild Sun Cream ranked No. 1, 2022 Glow Pick Hall of Fame Awards, sun cream category 
+                <h2>
+                    Itchiness, <br/>
+                    <span>the worst outcome</span> of <br/>
+                    sensitive, dry skin
+                </h2>
+                <p class="">
+                    Don’t let it go untreated.<br/>
+                    <strong>Soothe and moisturize</strong> <span>quickly <br/>
+                    and reliably</span> with a trusted <br/>
+                    moisturizer that’s proven <br/>
+                    to help fight itchiness. 
                 </p>
             </div>
         </div>
         <div class="content-box box3">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img3.png" alt="" />
-            </figure>
-            <div class="txt-box txt-box1">
-                <p class="ff-mon">
-                    Why <br>
-                    customers<br>
-                    <strong>choose it</strong>
-                </p>
-            </div>
-            <div class="txt-box txt-box2">
-                <p class="ff-mon">
-                    “It glides on smoothly and absorbs well,<br>
-                    so <strong>my makeup stays put </strong>and I love it!”
-                </p>
-                <p class="ff-mon">
-                    “I was worried that<br>
-                    it would be oily because of its watery texture,<br>
-                    but<strong> it didn’t leave my skin feeling greasy.”</strong>
-                </p>
-                <p class="ff-mon">
-                    <strong>“It leaves no white cast, so it’s great for everyday use!</strong><br>
-                    I think it would be great for a clean look <br>
-                    in summer and a dewy finish in winter.”
-                </p>
-                <p class="ff-mon">
-                    “Even with a good foundation,<br>
-                    the skin around my eyes is dry and stressed,<br>
-                     but <strong>this moisturizer keeps it hydrated for longer.”</strong>
-                </p>
-            </div>
-            <div class="txt-box txt-box3">
-                <p class="ff-mon">
-                    *Based on average scores on Olive Young Mall (starting Oct. 2022)<br>
-                    *From reviews on CLUB CLIO online mall / As subjective reviews and actual results may vary per individual. 
-                </p>
-                <h2 class="ff-mon">
-                    Clinically proven UV protection index 
-                </h2>
-                <p class="ff-mon">
-                    Clinically test for UVB and UVA protection index <br>
-                    Korea Institute of Dermatological Sciences / 10 people / Mar. 29 – Apr. 30, 2021 / Results may vary per individual. 
-                </p>
-            </div>
-        </div>
-        <div class="content-box box4">
-            <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img4.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img3.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
                 <h2 class="black-color fw-bold">
                     <span>Featured ingredients</span>
                 </h2>
-                <p class="ff-mon">
-                    Feels comfortable on sensitive skin<br>
-                    <strong>Calming Moisture Vegan Sun Cream</strong>
-                </p>
             </div>
             <div class="txt-box txt-box2">
-                <h2 class="ff-mon">
-                    Comfortable wear #Calming_Sun
-                </h2>
-                <h2 class="ff-mon">
-                    Light and moisturizing #Moisture_Sun
-                </h2>
-                <h2 class="ff-mon">
-                    Reef-friendly #Reef Safe_Sun
+                <p class="">
+                    #Panthetoin™
+                </p>
+                <h2>
+                    #Secret to real, <br/>
+                    long-lasting hydration, <br/>
+                    4:1 ratio
                 </h2>
             </div>
             <div class="txt-box txt-box3">
+                <p class="">
+                    The <strong>unique 4:1 ratio </strong>that we’ve found <br/>
+                    for a more effective delivery to the skin
+                </p>
+                <p class="">
+                    Formulated with<span> Panthenol </span><br/>
+                    to deeply moisturize sensitive skin 
+                </p>
+                <p class="">
+                    and <span>Ectoin </span>to protect against <br/>
+                    microorganisms that thrive <br/>
+                    in extreme environments,<span> Panthetoin™</span>
+                </p>
+                <p class="">
+                    deeply moisturizes <br/>
+                    and soothes dry, sensitive skin <br/>
+                    <span>to protect against moisture loss <br/>
+                    from the external environment. </span>
+                </p>
+                <h2>
+                    *Limited to the features of the ingredients
+                </h2>
+            </div>
+        </div>
+        <div class="content-box box4">
+            <figure>
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img4.png" alt="" />
+            </figure>
+            <div class="txt-box txt-box1">
+                <p class="">
+                    Hydrates the skin even in a variety of dry environment!
+                </p>
+                <h2 class="ff-mon">
+                    <span>Clinically proven</span><br/>
+                    for perfect hydration
+                </h2>
+            </div>
+            <div class="txt-box txt-box2">
                 <p class="ff-mon">
-                    Mild sun cream infused with calming properties of heartleaf extract <br>
-                    <span>*Houttuynia Cordata Extract / Limited to the features of the ingredient </span>
+                    Keeps the skin hydrated <br/>
+                    for 200 hours
                 </p>
                 <p class="ff-mon">
-                    Water-full chemical sunscreen that is absorbed quickly without stickiness
+                    Increases <br/>
+                    the skin’s moisture content
                 </p>
                 <p class="ff-mon">
-                    Reef safe sun cream<br>
-                    that cares for the marine environment as well as your skin<br>
-                    <span>*Tested for exclusion of Oxybenzone (Benzophenone-3), Octinoxate (Ethylhexyl Methoxycinnamate) </span>
-    
+                    Improves inner skin hydration <br/>
+                    <span>in dry environments</span>
+                </p>
+                <p class="ff-mon">
+                    Improves tightness of the skin
+                </p>
+            </div>
+            <div class="txt-box txt-box3">
+                <p class="ff-mon">
+                    200-hour lasting hydration
+                </p>
+                <p class="ff-mon">
+                    Improves inner skin hydration<br/>
+                    in dry environments
                 </p>
             </div>
             <div class="txt-box txt-box4">
-                <h2 class="ff-mon">
-                    Vegan certified 
-                </h2>
                 <p class="ff-mon">
-                    Certified by<br>
-                    Belgium vegan certification,<br>
-                    free of animal ingredients 
+                    Improves the skin’s moisture 
+                </p>
+                <p class="ff-mon">
+                    Improves skin tightness
+                </p>
+            </div>
+            <div class="txt-box txt-box5">
+                <p class="ff-mon">
+                    Comparison between Before Use (0%) and Immediately After <br/>
+                    Clinical test for the product’s antidryness in front of a heater, inner skin hydration improvement <br/>
+                    in dry environments:<br/>
+                    P&K Skin Research Center / Nov. 21–23, 2022 / 22 people aged 20–59<br/>
+                    Clinical test for the product’s 200-hour lasting hydration, antitightness: <br/>
+                    P&K Skin Research Center / Nov. 14–25, 2022 / 21 people aged 20–59<br/>
+                    Clinical test for the product’s itchiness relief by repairing skin barrier functions: <br/>
+                    Ellead / Feb. 13–Mar. 31. 2023 / 33 people 
                 </p>
             </div>
         </div>
         <div class="content-box box5">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img5.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img5.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
-                <h2 class="ff-mon">
-                    <span>Packed with the calming properties of<br>
-                    Jeju heartleaf extract! <br>
-                    Feeling comfortable</span> #Calming Sun Cream
+                <p class="ff-mon">
+                    100% intention to repurchase
+                </p>
+                <h2 class="">
+                    Exceptional hydration <br/>
+                    <span>felt immediately after use</span>
                 </h2>
-                <p class="ff-mon">
-                    A mild sun cream formulated<br>
-                    with the calming properties of Jeju heartleaf extract* <br>
-                    to calm down sensitive skin
-                </p>
-                <p class="ff-mon">
-                    *Houttuynia Cordata Extract / Limited to the features of the ingredient 
-                </p>
             </div>
             <div class="txt-box txt-box2">
                 <p class="ff-mon">
-                    *Tested for relief of skin irritation caused by external stimuli <br>
-                    *Clinical test for goodal Heartleaf Calming Moisture Sun Cream’s calming effects<br>
-                    on skin irritation by external stimuli (UV)<br>
-                    Skinmed Skin Research Center / 20 subjects /<br>
-                    Mar. 18 – Apr. 1, 2021 / Results may vary per individual.
+                    Satisfaction with calming 
+                </p>
+                <p class="ff-mon">
+                    My skin feels revitalized <br/>
+                    from the inside out. 
+                </p>
+                <p class="ff-mon">
+                    It helps reduce tightness <br/>
+                    in my skin. 
                 </p>
             </div>
             <div class="txt-box txt-box3">
-                <h2 class="ff-mon">
-                    Calming effects
-                    <span>Customer satisfaction </span>
-                </h2>
                 <p class="ff-mon">
-                    [Clinical test for goodal Heartleaf Moisture Sun Cream’s calming<br>
-                    and cooling effects on skin irritation caused by external stimuli] <br>
-                    Korea Institute of Dermatological Sciences /  20 women / Aug. 12, 2022 / Results may vary per individual. <br>
-                    *Percentage of test subjects who responded with a positive answer, based on average score 
+                    My skin barrier feels firmer
+                </p>
+                <p class="ff-mon">
+                    My skin feels hydrated <br/>
+                    for long hours.
+                </p>
+                <p class="ff-mon">
+                    I’m satisfied with its quick <br/>
+                    absorption.
                 </p>
             </div>
             <div class="txt-box txt-box4">
-                <h2 class="ff-mon">
-                    Hydration 
-                </h2>
-                <h2 class="ff-mon">
-                    Calming 
-                </h2>
-                <h2 class="ff-mon">
-                    Cooling 
-                </h2>
-                <h2 class="ff-mon">
-                    Overall satisfaction 
-                </h2>
+                <p class="ff-mon">
+                    Intention<br/>
+                    to repurchase
+                </p>
             </div>
             <div class="txt-box txt-box5">
                 <p class="ff-mon">
-                    *Satisfaction survey immediately after using once 
+                    Clinical test for the product’s antidryness in front of a heater, <br/>
+                    inner skin hydration improvement in dry environments:<br/>
+                    P&K Skin Research Center / Nov. 21–23, 2022 / 22 people aged 20–59<br/>
+                    *Percentage of respondents who answered the questionnaire<br/>
+                    with a score of 3 or higher on a scale of 1–5 
                 </p>
             </div>
         </div>
         <div class="content-box box6">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img6.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img6.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
+                <h2 class="">
+                    #Good ingredients as always
+                </h2>
                 <p class="ff-mon">
-                    <strong>Calming effects on skin irritation</strong><br>
-                    caused by external stimuli
-                </p>
-                <p class="ff-mon">
-                    Skin temperature DOWN<br>
-                    <strong>Feels cool on the skin! </strong>
-                </p>
-                <p class="ff-mon">
-                    Gentle on sensitive skin<br>
-                    <strong>Low irritant formula</strong>
+                    Carefully selected All Green ingredients!
                 </p>
             </div>
             <div class="txt-box txt-box2">
+                <h2 class="">
+                    <span>Hypoallergenic vegan care</span><br/>
+                    for sensitive skin 
+                </h2>
                 <p class="ff-mon">
-                    [Clinical test for goodal Heartleaf Moisture Sun Cream’s calming<br>
-                    and cooling effects on skin irritation caused by external stimuli] <br>
-                    Korea Institute of Dermatological Sciences /  20 women / Aug. 12, 2022 /<br>
-                    Results are temporary and may vary per individual. 
-                </p>
-                <p class="ff-mon">
-                    [Clinical test for goodal Heartleaf Moisture Sun Cream’s calming<br>
-                    and cooling effects on skin irritation caused by external stimuli] <br>
-                    Korea Institute of Dermatological Sciences /  20 women / Aug. 12, 2022 /<br>
-                    Results are temporary and may vary per individual. / Before use: 100%
-                </p>
-                <p class="ff-mon">
-                    [Clinical test for use on sensitive skin] Skinmed Skin Research Center / 30 people /  Mar. 23–25, 2021 <br>
-                    [Primary Skin Irritation Test] Skinmed Skin Research Center /<br>
-                    31 people / Mar. 18 – Apr. 1, 2021 *Results may vary per individual. 
+                    Primary skin irritation test for sensitive skin: <br/>
+                    P&K Skin Research Center / Aug. 10–12, 2022 / 31 people aged 20–55<br/>
+                    Primary skin irritation test for human skin: <br/>
+                    P&K Skin Research Center / Aug. 10–12, 2022 / 32 people aged 20–55
                 </p>
             </div>
             <div class="txt-box txt-box3">
                 <p class="ff-mon">
-                    Clinically tested<br>
-                    for use<br>
-                    on <strong>sensitive skin </strong> 
+                    Free of fragrance and color, <br/>
+                    <strong>0.00% zero skin irritation</strong>
                 </p>
                 <p class="ff-mon">
-                    tested for<br>
-                    <strong>skin irritation</strong>
+                    Cruelty-free, no animal ingredients<br/>
+                    <strong>Vegan care for your skin <br/>
+                    and the environment</strong>
+                </p>
+                <p class="ff-mon">
+                    <strong>Dermatologically tested for sensitive skin </strong><br/>
+                    for daily use
+                </p>
+                <p class="ff-mon">
+                    <strong>Obtained EXCELLENT grade</strong><br/>
+                    from the German’s Dermatest<br/>
+                    for safe use
+                </p>
+                <p class="ff-mon">
+                    <strong>Tested for the nondetection of <br/>
+                    20 ingredients to watch out for </strong><br/>
+                    <span>(Phenoxyethanol/Tricolosan/Benzyl Alcohol, Benzoic Acid, and more)</span>
+                </p>
+            </div>
+            <div class="txt-box txt-box4">
+                <h2 class="">
+                    <span>‘Yes’ to rich hydration</span><br/>
+                    ‘No’ to a sticky feel
+                </h2>
+            </div>
+            <div class="txt-box txt-box5">
+                <p class="ff-mon">
+                    No more hair sticking<br/>
+                    to your cheeks from excessive oiliness! 
+                </p>
+                <p class="ff-mon">
+                    <strong>The U-Olisome, a nanometer-scale breakdown of<br/>
+                    moisturizing particles,</strong><br/>
+                    is absorbed more quickly into the skin<br/>
+                    and leaves <span>it feeling silky smooth with no residue. </span>
                 </p>
             </div>
         </div>
         <div class="content-box box7">
             <figure>
-                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0513_en/240513_en1_img77.png" alt="" />
+                <img src="https://image.globaloliveyoungshop.com/Designbook/24_0603_en/240603_en3_img7.png" alt="" />
             </figure>
             <div class="txt-box txt-box1">
-                <h2 class="ff-mon">
-                    <span>Feels light and moisturizing<br>
-                    like a moisturizing cream</span><br>
-                    #Moist Sun Cream
+                <h2 class="black-color fw-bold">
+                    <span>Complete the regimen!</span>
                 </h2>
                 <p class="ff-mon">
-                    Water-full chemical sunscreen<br>
-                    that is absorbed quickly without stickiness 
+                    Better together,<br/>
+                    Panthentoin Line
                 </p>
             </div>
             <div class="txt-box txt-box2">
-                <h2 class="ff-mon">
-                    Ideal for 
-                </h2>
                 <p class="ff-mon">
-                    Calming Moisture Sun Cream
-                </p>
-                <h2 class="ff-mon">
-                    User Guide 
-                </h2>
-            </div>
-            <div class="txt-box txt-box3">
-                <p class="ff-mon">
-                    Those looking for a <strong>sun cream with proven UV protection </strong><br>
-                    Those looking for a <strong>mild sun cream for sensitive skin </strong><br>
-                    Those who need a <strong>watery sun cream</strong><br>
-                    Those who want an <strong>environmentally friendly sun cream </strong>
-                </p>
-            </div>
-            <div class="txt-box txt-box4">
-                <h2 class="ff-mon">
-                    For face and body
-                </h2>
-                <h2 class="ff-mon">
-                    Daily sun cream for men and women
-                </h2>
-                <h2 class="ff-mon">
-                    A makeup booster<br>
-                    that won’t make your makeup look cakey!
-                </h2>
-            </div>
-            <div class="txt-box txt-box5">
-                <p class="ff-mon">
-                    Apply evenly to the face and sun-exposed areas of the body<br>
-                    as the final step in your skincare regime.
+                    Start your <span>daily skin-care routine <br/>
+                    with Essence Toner </span>to hydrate your skin <br/>
+                    and use the <span>Cream to finish. </span>
                 </p>
                 <p class="ff-mon">
-                    It is a daily sun care for men and women with a non-sticky,<br>
-                    moisturizing finish.
+                    <span>On exceptionally dry days, apply Enriched Balm </span><br/>
+                    to local areas to combat dryness. 
                 </p>
                 <p class="ff-mon">
-                    The lightweight, moisturizing formula gives a flawless finish<br>
-                    and serves as a makeup booster.  
+                    Before special occasions, <br/>
+                    <span>apply the mask sheet firmly <br/>
+                    to the face to quickly prepare the skin <br/>
+                    for a flawless base. </span>
                 </p>
             </div>
         </div>
