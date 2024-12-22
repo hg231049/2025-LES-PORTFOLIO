@@ -63,14 +63,14 @@ header
 #header.on .header-top { top:0; }
 #header.change .header-top { top:0; }
 
-.header-left { display:inline-block; float:left; }
-.header-right { display:inline-block; float:right; }
+.header-left { display:inline-block; float:left; max-width:8.834%; width:100%; }
+.header-right { display:inline-block; float:right; width:91.166%; padding:0 0 0 1.945%; text-align:right; }
 
 .header-left .logo { display:inline-block; cursor: pointer; }
 .header-left .logo > a { display:inline-flex; margin:25px 0;  }
 .header-left .logo img { width:100%; }
 
-#header .gnb > li { position:relative; display:inline-block; margin:0 15px; transition:0.2s ease-in-out; }
+#header .gnb > li { position:relative; display:inline-block; margin: 0 0.914%; transition:0.2s ease-in-out; }
 #header .gnb > li > a { color:var(--sub-color); font-size:22px; } 
 #header .gnb > li.red { margin-right:0; padding:11px 26px 12px; border-radius:50px; background:var(--main-color); }
 #header .gnb > li.on > a { color:var(--main-color); transition:0.2s ease-in-out; } 

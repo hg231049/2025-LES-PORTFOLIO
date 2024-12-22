@@ -29,7 +29,6 @@ table .pc-view { display:revert; }
 	/*=======================================
 	상단 영역 - 1024px
 	========================================*/
-	.header-left .logo { width:78%; }
 	#header .gnb > li { margin:0 12px; }
 	#header .gnb > li > a { font-size:19px; }  
 	#header .gnb > li.red { padding:9px 20px 10px; }
@@ -62,12 +61,13 @@ table .pc-view { display:revert; }
 	
 	.header-left,
 	.header-right { display:block; float:none; }
+	.header-left { max-width:27.162%; width:100%; margin:0 auto; }
 
-	.header-left .logo { display:block; width:88px; margin:0 auto;}
+	.header-left .logo { display:block; width:100%; margin:0 auto;}
 	.header-left .logo > a { margin:15px 0; font-size:0; }
 	.header-left .logo > a img { width:100%; }
 	
-	#header .header-top .header-right { position:absolute; top:-200px; left:50%; transform:translateX(-50%); }
+	#header .header-top .header-right { position:absolute; top:-200px; left:50%; width:auto; padding:0; transform:translateX(-50%); }
 	#header.change .header-top .header-right { top:71px; }
 	#header .gnb { display:flex; justify-content:space-between; }
 	#header .gnb > li { text-align:center; }
