@@ -9,7 +9,7 @@ setTimeout(function () {
   $(".main-visual .main-visual-title .visual-txt-motion > img").addClass(
     "rotate"
   );
-}, 3200);
+}, 3000);
 
 setTimeout(function () {
   $(".main-visual .scroll-down").addClass("on");
@@ -109,7 +109,7 @@ $(document).ready(function () {
     $(".skill3").easyPieChart(skillOption);
   });
 
-  /* 흐르는 텍스트 */
+  /* flow */
   $(".flow-line-box").each(function () {
     for (var i = 0; i < 10; i++) {
       $(this)
@@ -153,11 +153,4 @@ $(document).ready(function () {
       });
     }
   );
-
-  /* contac 상단 흐르는 배경 */
-  $(".contact-wrap .contact-bg").each(function () {
-    for (var i = 0; i < 10; i++) {
-      $(this).find("img").clone().appendTo($(this).find("span"));
-    }
-  });
 });

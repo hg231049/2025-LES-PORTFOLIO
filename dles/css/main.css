@@ -462,19 +462,23 @@
 /* 띠 배너 */
 .flow-line-box {
   white-space: nowrap;
-  overflow: hidden;
 }
 .flow-inner {
-  animation: flowTxt 18s linear Infinite;
+  animation: flowTxt 30s linear Infinite;
 }
-.flow-line-box em {
+
+.flow-txt-wrap {
+  overflow: hidden;
+}
+
+.flow-txt-wrap em {
   color: var(--sub-color);
   font-size: 45px;
   font-weight: 700;
   font-style: normal;
   vertical-align: middle;
 }
-.flow-line-box em .star-icon {
+.flow-txt-wrap em .star-icon {
   padding: 0 40px;
   background: url("../img/star-icon1.png") no-repeat center;
 }
@@ -772,21 +776,14 @@
   top: -1px;
   left: 0;
   width: 100%;
-  animation: flowTxt 18s linear Infinite;
   z-index: 9;
-}
-.contact-wrap .contact-bg span {
-  display: flex;
-}
-.contact-wrap .contact-bg span em {
-  background: url("../img/contact-bg.png") no-repeat center;
 }
 .contact-wrap .contact-bg img {
   width: 100%;
   vertical-align: top;
 }
-.contact-wrap .contact-bg img:nth-child(even) {
-  margin-left: -1px;
+.contact-wrap .contact-bg em:nth-child(even) img {
+  margin-left: -5px;
   transform: scaleX(-1);
 }
 .contact-box {
@@ -1233,12 +1230,12 @@
 
   /* flow line 배너 */
   .flow-inner {
-    animation: flowTxt 7s linear Infinite;
+    animation: flowTxt 15s linear Infinite;
   }
-  .flow-line-box em {
+  .flow-txt-wrap .flow-inner em {
     font-size: 30px;
   }
-  .flow-line-box em .star-icon {
+  .flow-txt-wrap .flow-inner em .star-icon {
     background-size: 30%;
   }
 
@@ -1252,6 +1249,7 @@
   .project-tab > ul > li {
     width: 33.33%;
     margin: 15px 0;
+    padding: 0 2%;
     font-size: 18px;
     text-align: center;
   }
@@ -1298,11 +1296,6 @@
   }
   .etc-project-wrap .etc-box .prdList > li .etc-slide .description p {
     font-size: 14px;
-  }
-
-  /* contact */
-  .contact-wrap .contact-bg {
-    animation: flowTxt 8s linear Infinite;
   }
 }
 
